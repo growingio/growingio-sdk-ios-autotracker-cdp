@@ -18,14 +18,14 @@
 //  limitations under the License.
 
 
-#import "GrowingStrongProxy.h"
+#import "GrowingDynamicProxy.h"
 #import "GrowingRealAutotracker.h"
 #import "GrowingTrackConfiguration+GrowingAutotracker.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GrowingCdpAutotracker : GrowingStrongProxy
+@interface GrowingCdpAutotracker : GrowingDynamicProxy
 
 + (void)startWithConfiguration:(GrowingTrackConfiguration *)configuration launchOptions:(NSDictionary *)launchOptions;
 

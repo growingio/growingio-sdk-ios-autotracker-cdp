@@ -17,11 +17,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "GrowingStrongProxy.h"
+#import "GrowingDynamicProxy.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GrowingCdpTracker : GrowingStrongProxy
+@interface GrowingCdpTracker : GrowingDynamicProxy
 
 + (void)startWithConfiguration:(GrowingTrackConfiguration *)configuration launchOptions:(NSDictionary *)launchOptions;
 
