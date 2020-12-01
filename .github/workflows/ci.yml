@@ -21,17 +21,21 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
       # Runs a single command using the runners shell
       - name: Before script
         run: |
           brew tap growingio/homebrew-oclint
           brew install oclint-growing
+          
+          cd $GITHUB_WORKSPACE/../
+          git clone https://github.com/growingio/growingio-sdk-ios-autotracker.git
+          cd $GITHUB_WORKSPACE
+          
           pod install
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           set -o pipefail
-          xcodebuild -workspace GrowingAnalytics.xcworkspace -scheme Example -configuration Release -sdk iphonesimulator -arch x86_64 clean build | xcpretty -r json-compilation-database -o compile_commands.json
+          xcodebuild -workspace GrowingAnalytics-cdp.xcworkspace -scheme Example -configuration Release -sdk iphonesimulator -arch x86_64 clean build | xcpretty -r json-compilation-database -o compile_commands.json
           oclint-json-compilation-database -e Pods -- -rc GIO_METHOD_ALLOW_UPPERCASE="URL,FMG3DB,TXT,UTF,STM,IMP" -rc GIO_CATEGORY_PREFIX=Growing -rc GIO_CLASS_PREFIX=Growing -max-priority-2=0
