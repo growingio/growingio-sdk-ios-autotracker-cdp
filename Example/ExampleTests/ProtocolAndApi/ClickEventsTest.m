@@ -8,14 +8,14 @@
 
 #import "ClickEventsTest.h"
 
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import "MockEventQueue.h"
 #import "NoburPoMeaProCheck.h"
 @implementation ClickEventsTest
 
 - (void)beforeEach {
     //设置userid,确保cs1字段不空
-    [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"test"];
 }
 
 - (void)afterEach {
@@ -59,7 +59,7 @@
      function:setDataCollectionEnabled:NO，不发送click事件
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setDataCollectionEnabled:NO];
+    [[GrowingCdpTracker sharedInstance] setDataCollectionEnabled:NO];
     [[viewTester usingLabel:@"UI界面"] tap];
     [tester waitForTimeInterval:1];
     [[viewTester usingLabel:@"UI界面"] tap];
@@ -79,7 +79,7 @@
         XCTAssertEqual(1, 0);
     }
     //恢复track状态
-    [[GrowingTracker sharedInstance] setDataCollectionEnabled:YES];
+    [[GrowingCdpTracker sharedInstance] setDataCollectionEnabled:YES];
 }
 
 - (void)test11ColorButtonCheck {

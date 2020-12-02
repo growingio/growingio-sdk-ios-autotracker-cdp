@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 手动标识该view的tag
 // 这个tag必须是全局唯一的，在代码结构改变时也请保持不变
-@property (nonatomic, copy)NSString *growingUniqueTag;
+@property (nonatomic, copy) NSString *growingUniqueTag;
 
 @end
 

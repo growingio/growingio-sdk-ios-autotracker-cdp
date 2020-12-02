@@ -8,7 +8,7 @@
 
 #import "LoginUserAttributerEventsTest.h"
 
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import "LogOperHelper.h"
 #import "ManualTrackHelper.h"
 #import "MockEventQueue.h"
@@ -22,9 +22,9 @@
     /**
      function:setPeopleVariable正常情况
      **/
-    [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"test"];
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"测试名字", @"title" : @"QA"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"测试名字", @"title" : @"QA"}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     NSLog(@"LOGIN_USER_ATTRIBUTES事件：%@", pplEventArray);
@@ -53,7 +53,7 @@
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
     //    [[viewTester usingLabel:@"SetPV"] tap];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:nil];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:nil];
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getValueErrNsLog]];
     //恢复日志重定向
@@ -73,7 +73,7 @@
      2019-1-7,优化支持传空对象：{}
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     NSLog(@"PPL事件：%@", pplEventArray);
@@ -96,7 +96,7 @@
      function:setPeopleVariableWithKey:andStringValue,发送正常数据
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"GrowingIO"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"GrowingIO"}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     // NSLog(@"LOGIN_USER_ATTRIBUTES事件：%@",pplEventArray);
@@ -122,7 +122,7 @@
      function:setPeopleVariableWithKey:andStringValue,更新数据
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"GIO"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"name" : @"GIO"}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     // NSLog(@"LOGIN_USER_ATTRIBUTES事件：%@",pplEventArray);
@@ -149,7 +149,7 @@
     [MockEventQueue.sharedQueue cleanQueue];
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"" : @"GIO"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"" : @"GIO"}];
     //  [[viewTester usingLabel:@"SetPVS"] tap];
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getFlagErrNsLog]];
@@ -172,7 +172,7 @@
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
     //   [[viewTester usingLabel:@"SetPVS"] tap];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{[NSNull null] : @"GIO"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{[NSNull null] : @"GIO"}];
 
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getValueErrNsLog]];
@@ -196,7 +196,7 @@
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
     //   [[viewTester usingLabel:@"SetPVS"] tap];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"name" : [NSNull null]}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"name" : [NSNull null]}];
 
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getValueErrNsLog]];
@@ -222,7 +222,7 @@
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
     //   [[viewTester usingLabel:@"SetPVS"] tap];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"name" : @""}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"name" : @""}];
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getValueErrNsLog]];
     //恢复日志重定向
@@ -244,7 +244,7 @@
      function:setPeopleVariableWithKey:andNumberValue正整数
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"score" : @"98"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"score" : @"98"}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     // NSLog(@"LOGIN_USER_ATTRIBUTES事件：%@",pplEventArray);
@@ -271,7 +271,7 @@
      function:setPeopleVariableWithKey:andNumberValue更新为浮点数
      **/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"score" : @"23.62"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"score" : @"23.62"}];
     [tester waitForTimeInterval:2];
     NSArray *pplEventArray = [MockEventQueue.sharedQueue eventsFor:@"LOGIN_USER_ATTRIBUTES"];
     // NSLog(@"LOGIN_USER_ATTRIBUTES事件：%@",pplEventArray);
@@ -302,7 +302,7 @@
     //将Log日志写入文件
     [LogOperHelper writeLogToFile];
     //    [[viewTester usingLabel:@"SetPVN"] tap];
-    [[GrowingTracker sharedInstance] setLoginUserAttributes:@{@"" : @"42"}];
+    [[GrowingCdpTracker sharedInstance] setLoginUserAttributes:@{@"" : @"42"}];
     //检测日志输出
     Boolean chres = [LogOperHelper CheckLogOutput:[LogOperHelper getFlagErrNsLog]];
     //恢复日志重定向

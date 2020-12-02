@@ -8,7 +8,7 @@
 
 #import "GetIDsTest.h"
 #import "MockEventQueue.h"
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import "GrowingSession.h"
 @implementation GetIDsTest
 
@@ -18,7 +18,7 @@
      */
     [MockEventQueue.sharedQueue cleanQueue];
 
-    NSString *slab = [[GrowingTracker sharedInstance] getDeviceId];
+    NSString *slab = [[GrowingCdpTracker sharedInstance] getDeviceId];
     [tester waitForTimeInterval:1];
     NSLog(@"****获取设备ID****：%@",slab);
     if(![slab isEqualToString:@""])
@@ -41,7 +41,7 @@
      */
     [MockEventQueue.sharedQueue cleanQueue];
     [tester waitForTimeInterval:1];
-    NSString *slab = [[GrowingTracker sharedInstance] getDeviceId];
+    NSString *slab = [[GrowingCdpTracker sharedInstance] getDeviceId];
     NSLog(@"****获取当前UID****：%@",slab);
     if(![slab isEqualToString:@""])
     {

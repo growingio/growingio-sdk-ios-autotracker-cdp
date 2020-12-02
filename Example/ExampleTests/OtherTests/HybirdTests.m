@@ -21,7 +21,7 @@
 #import <XCTest/XCTest.h>
 #import "MockEventQueue.h"
 #import "NoburPoMeaProCheck.h"
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import <KIF/KIF.h>
 //#import "GrowingWebCircle.h"
 //#import "GrowingSRWebSocket.h"
@@ -34,7 +34,7 @@
 @implementation HybirdTests
 
 - (void)setUp {
-    [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"test"];
     [[viewTester usingLabel:@"UI界面"] tap];
     [viewTester waitForTimeInterval:3];
     [[viewTester usingLabel:@"UI界面"] tap];

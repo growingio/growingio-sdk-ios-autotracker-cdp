@@ -51,11 +51,11 @@ static NSString *kGrowingGioId = @"GIO_ID";
 
 - (void)setGioId:(NSString * _Nonnull)gioId {
     _gioId = gioId;
-    [[GrowingPersistenceDataProvider sharedInstance] setValue:gioId forKey:kGrowingGioId];
+    [[GrowingPersistenceDataProvider sharedInstance] setString:gioId forKey:kGrowingGioId];
 }
 
 - (NSString *)gioId {
-    return [[GrowingPersistenceDataProvider sharedInstance] valueForKey:kGrowingGioId];
+    return [[GrowingPersistenceDataProvider sharedInstance] getStringforKey:kGrowingGioId];
 }
 
 #pragma mark - GrowingUserIdChangedDelegate

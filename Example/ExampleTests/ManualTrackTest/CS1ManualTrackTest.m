@@ -8,7 +8,7 @@
 
 #import "CS1ManualTrackTest.h"
 
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import "ManualTrackHelper.h"
 #import "MockEventQueue.h"
 #import "GrowingSession.h"
@@ -183,7 +183,7 @@
      function:UID为nil
      ***/
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setLoginUserId:NULL];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:NULL];
     [tester waitForTimeInterval:2];
     NSArray *visitEventArray = [MockEventQueue.sharedQueue eventsFor:@"VISIT"];
 
@@ -266,13 +266,13 @@
     NSDate *datenow = [NSDate date];
     NSString *timeSp = [NSString stringWithFormat:@"%lld", (long long)[datenow timeIntervalSince1970] * 1000LL];
     // 时间戳setUserId 方便触发事件获取session
-    [[GrowingTracker sharedInstance] setLoginUserId:timeSp];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:timeSp];
     [tester waitForTimeInterval:2];
     NSString *oldSession = [[GrowingSession currentSession] sessionId];
     XCTAssertNotNil(oldSession);
-    [[GrowingTracker sharedInstance] cleanLoginUserId];
+    [[GrowingCdpTracker sharedInstance] cleanLoginUserId];
 
-    [[GrowingTracker sharedInstance] setLoginUserId:@"lisi"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"lisi"];
     NSString *newSession = [[GrowingSession currentSession] sessionId];
     XCTAssertNotNil(newSession);
     XCTAssertNotEqual(oldSession, newSession);
@@ -284,14 +284,14 @@
     NSDate *datenow = [NSDate date];
     NSString *timeSp = [NSString stringWithFormat:@"%lld", (long long)[datenow timeIntervalSince1970] * 1000LL];
     // 时间戳setUserId 方便触发事件获取session
-    [[GrowingTracker sharedInstance] setLoginUserId:timeSp];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:timeSp];
     NSString *oldSession = [[GrowingSession currentSession] sessionId];
     XCTAssertNotNil(oldSession);
 
-    [[GrowingTracker sharedInstance] cleanLoginUserId];
+    [[GrowingCdpTracker sharedInstance] cleanLoginUserId];
     [self enterBackground];
     [self enterForeground];
-    [[GrowingTracker sharedInstance] setLoginUserId:@"lisi"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"lisi"];
     NSString *newSession = [[GrowingSession currentSession] sessionId];
     XCTAssertNotNil(newSession);
     XCTAssertNotEqual(oldSession, newSession);

@@ -61,7 +61,7 @@
     //    NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
     //    [self.webView loadRequest:request];
 
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
+    NSURL *url = [NSURL URLWithString:@"http://10.20.20.39:8081"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 }

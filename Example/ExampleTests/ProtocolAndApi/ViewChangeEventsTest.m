@@ -9,13 +9,13 @@
 #import "ViewChangeEventsTest.h"
 #import "MockEventQueue.h"
 #import "NoburPoMeaProCheck.h"
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 @implementation ViewChangeEventsTest
 
 
 - (void)setUp{
     //设置userid,确保cs1字段不空
-    [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"test"];
 
 }
 

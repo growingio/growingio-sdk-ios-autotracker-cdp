@@ -9,7 +9,7 @@
 
 #import "VisitorAttributesEventsTest.h"
 
-#import "GrowingTracker.h"
+#import "GrowingCdpTracker.h"
 #import "LogOperHelper.h"
 #import "ManualTrackHelper.h"
 #import "MockEventQueue.h"
@@ -18,7 +18,7 @@
 
 - (void)setUp {
     //设置userid,确保cs1字段不空
-    [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
+    [[GrowingCdpTracker sharedInstance] setLoginUserId:@"test"];
     [[viewTester usingLabel:@"UI界面"] tap];
 
 }
@@ -29,7 +29,7 @@
      **/
     [tester waitForTimeInterval:1];
     [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setVisitorAttributes:@{@"var1" : @"good", @"var2" : @"excell"}];
+    [[GrowingCdpTracker sharedInstance] setVisitorAttributes:@{@"var1" : @"good", @"var2" : @"excell"}];
     NSArray *visitorAttributesEventArray = [MockEventQueue.sharedQueue eventsFor:@"VISITOR_ATTRIBUTES"];
     NSLog(@"VISITOR_ATTRIBUTES 事件：%@", visitorAttributesEventArray);
     if (visitorAttributesEventArray.count >= 1) {
