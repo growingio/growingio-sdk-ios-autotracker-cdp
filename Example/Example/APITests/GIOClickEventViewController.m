@@ -9,6 +9,7 @@
 #import "GIOClickEventViewController.h"
 #import <GrowingCdpTracker.h>
 #import "AppDelegate.h"
+#import "GrowingCdpAutotracker.h"
 
 @interface GIOClickEventViewController ()
 
@@ -23,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.growingPageIgnorePolicy = GrowingIgnoreSelf;
+    self.growingPageAlias = @"xxxx";
 //    self.segmentControl.growingUniqueTag = @"language-selector";
 
  
