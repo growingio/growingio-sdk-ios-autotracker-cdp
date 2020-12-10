@@ -81,7 +81,6 @@ static GrowingCdpAutotracker *sharedInstance = nil;
         GrowingCdpResourceItem *item = [GrowingCdpResourceItem new];
         item.key = itemKey;
         item.id = itemId;
-        item.attributes = attributes;
         GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
         [[GrowingEventManager shareInstance] postEventBuidler:builder];
     }];

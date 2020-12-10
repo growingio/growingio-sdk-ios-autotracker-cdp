@@ -78,8 +78,10 @@ static GrowingCdpTracker *sharedInstance = nil;
         return;
     }
     [GrowingDispatchManager trackApiSel:_cmd dispatchInMainThread:^{
-        NSDictionary *dict = @{itemKey:itemId};
-        GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(dict).setAttributes(attributes).setEventName(eventName);
+        GrowingCdpResourceItem *item = [GrowingCdpResourceItem new];
+        item.key = itemKey;
+        item.id = itemId;
+        GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
         [[GrowingEventManager shareInstance] postEventBuidler:builder];
     }];
 }
