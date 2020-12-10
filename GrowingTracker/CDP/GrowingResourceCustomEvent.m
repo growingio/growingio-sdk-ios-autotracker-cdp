@@ -19,6 +19,18 @@
 
 #import "GrowingResourceCustomEvent.h"
 
+@implementation GrowingCdpResourceItem
+
+- (NSDictionary *)toDictionary {
+    NSMutableDictionary *dataDictM = [NSMutableDictionary dictionary];
+    dataDictM[@"id"] = self.id;
+    dataDictM[@"key"] = self.key;
+    dataDictM[@"attributes"] = self.attributes;
+    return dataDictM;;
+}
+
+@end
+
 @implementation GrowingResourceCustomEvent
 
 - (instancetype)initWithBuilder:(GrowingBaseBuilder *)builder {
@@ -36,7 +48,7 @@
 
 - (NSDictionary *)toDictionary {
     NSMutableDictionary *dataDictM = [NSMutableDictionary dictionaryWithDictionary:[super toDictionary]];
-    dataDictM[@"resourceItem"] = self.resourceItem;
+    dataDictM[@"resourceItem"] = self.resourceItem.toDictionary;
     return dataDictM;;
 }
 
@@ -45,8 +57,8 @@
 
 @implementation GrowingResourceCustomBuilder
 
-- (GrowingResourceCustomBuilder *(^)(NSDictionary *value))setResourceItem {
-    return ^(NSDictionary *value) {
+- (GrowingResourceCustomBuilder *(^)(GrowingCdpResourceItem *value))setResourceItem {
+    return ^(GrowingCdpResourceItem *value) {
         self->_resourceItem = value;
         return self;
     };

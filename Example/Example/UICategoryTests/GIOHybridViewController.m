@@ -61,7 +61,7 @@
     //    NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
     //    [self.webView loadRequest:request];
 
-    NSURL *url = [NSURL URLWithString:@"http://10.20.20.39:8081"];
+    NSURL *url = [NSURL URLWithString:@"https://release-messages.growingio.cn/push/cdp/webcircel.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 }

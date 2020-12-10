@@ -31,9 +31,12 @@ static NSString *const kGrowingProjectId = @"0a1b4118dd954ec3bcc69da5138bdb96";
     GrowingTrackConfiguration *configuration = [GrowingTrackConfiguration configurationWithProjectId:kGrowingProjectId];
     configuration.debugEnabled = YES;
     configuration.impressionScale = 1.0;
+    configuration.dataCollectionServerHost = @"http://106.75.81.105:8080";
     configuration.dataSourceId = @"YourDatasourceId";
     [GrowingCdpAutotracker startWithConfiguration:configuration launchOptions:launchOptions];
-    
+    [[GrowingCdpAutotracker sharedInstance] setLoginUserId:@"112333445"];
+//    [[GrowingCdpAutotracker sharedInstance] trackCustomEvent:@"iostest01" withAttributes:@{@"age":@"18"}];
+    [[GrowingCdpAutotracker sharedInstance] trackCustomEvent:@"resourceItemTest" itemKey:@"testkey" itemId:@"testid" withAttributes:@{@"ok":@"false"}];
 //    [GrowingTracker startWithConfiguration:configuration launchOptions:launchOptions];
 
     [self registerRemoteNotification];

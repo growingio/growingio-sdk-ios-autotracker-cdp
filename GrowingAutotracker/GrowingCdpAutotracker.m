@@ -28,6 +28,7 @@
 #import "GrowingTrackConfiguration+CdpTracker.h"
 #import "GrowingLogMacros.h"
 #import "GrowingCocoaLumberjack.h"
+#import "GrowingSession.h"
 static GrowingCdpAutotracker *sharedInstance = nil;
 
 @interface GrowingCdpAutotracker ()
@@ -55,6 +56,7 @@ static GrowingCdpAutotracker *sharedInstance = nil;
         GrowingRealAutotracker *autotracker = [GrowingRealAutotracker trackerWithConfiguration:configuration launchOptions:launchOptions];
         sharedInstance = [[self alloc] initWithRealAutotracker:autotracker];
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
+        [[GrowingSession currentSession] addUserIdChangedDelegate:sharedInstance.interceptor];
         [[GrowingEventManager shareInstance] addInterceptor:sharedInstance.interceptor];
     });
 }
@@ -76,8 +78,11 @@ static GrowingCdpAutotracker *sharedInstance = nil;
         return;
     }
     [GrowingDispatchManager trackApiSel:_cmd dispatchInMainThread:^{
-        NSDictionary *dict = @{itemKey:itemId};
-        GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(dict).setAttributes(attributes).setEventName(eventName);
+        GrowingCdpResourceItem *item = [GrowingCdpResourceItem new];
+        item.key = itemKey;
+        item.id = itemId;
+        item.attributes = attributes;
+        GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
         [[GrowingEventManager shareInstance] postEventBuidler:builder];
     }];
 }

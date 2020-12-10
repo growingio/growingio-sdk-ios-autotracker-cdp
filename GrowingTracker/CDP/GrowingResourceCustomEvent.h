@@ -20,10 +20,21 @@
 #import "GrowingCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@interface GrowingCdpResourceItem : NSObject
+
+@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) NSDictionary *attributes;
+
+- (NSDictionary *)toDictionary;
+
+@end
+
 @class GrowingResourceCustomBuilder;
 @interface GrowingResourceCustomEvent : GrowingCustomEvent
 
-@property (nonatomic, strong, readonly) NSDictionary *resourceItem;
+@property (nonatomic, strong, readonly) GrowingCdpResourceItem *resourceItem;
 
 + (GrowingResourceCustomBuilder *)builder;
 
@@ -31,9 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GrowingResourceCustomBuilder : GrowingCustomBuilder
 
-@property (nonatomic, strong, readonly) NSDictionary *resourceItem;
+@property (nonatomic, strong, readonly) GrowingCdpResourceItem *resourceItem;
 
-- (GrowingResourceCustomBuilder *(^)(NSDictionary *value))setResourceItem;
+- (GrowingResourceCustomBuilder *(^)(GrowingCdpResourceItem *value))setResourceItem;
 
 //override
 - (GrowingResourceCustomBuilder *(^)(NSString *value))setEventName;
