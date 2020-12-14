@@ -8,7 +8,7 @@
 
 #import "GIOUserIdViewController.h"
 #import "GIOConstants.h"
-#import "GrowingCdpAutotracker.h"
+#import "GrowingAutotracker.h"
 @interface GIOUserIdViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userIdTextField;
@@ -30,30 +30,30 @@
 
 //设置UID为10048
 - (IBAction)setUserId:(id)sender {
-    [[GrowingCdpAutotracker sharedInstance] setLoginUserId:@"10048"];
+    [[GrowingAutotracker sharedInstance] setLoginUserId:@"10048"];
     NSLog(@"设置用户ID为10048");
 }
 //更新用户ID为10084
 - (IBAction)changeUserId:(id)sender {
-    [[GrowingCdpAutotracker sharedInstance] setLoginUserId:@"10084"];
+    [[GrowingAutotracker sharedInstance] setLoginUserId:@"10084"];
     NSLog(@"设置用户ID为10084");
 }
 //清除用户ID
 - (IBAction)cleanUserId:(id)sender {
-    [[GrowingCdpAutotracker sharedInstance] cleanLoginUserId];
+    [[GrowingAutotracker sharedInstance] cleanLoginUserId];
     NSLog(@"清除用户ID");
 }
 //自定义UID操作
 - (IBAction)customSetUserId:(id)sender {
     NSString *userId = self.userIdTextField.text;
-    [[GrowingCdpAutotracker sharedInstance] setLoginUserId:userId];
+    [[GrowingAutotracker sharedInstance] setLoginUserId:userId];
     NSLog(@"设置用户ID为%@", userId);
 }
 //UID超过1000个字符操作
 - (IBAction)setOutRangeUserId:(id)sender {
     NSString *outRangeUid = [GIOConstants getMyInput];
     NSLog(@"GetMyInput length:%ld",outRangeUid.length);
-    [[GrowingCdpAutotracker sharedInstance] setLoginUserId:outRangeUid];
+    [[GrowingAutotracker sharedInstance] setLoginUserId:outRangeUid];
 }
 
 - (IBAction)tapGestureHandle:(UITapGestureRecognizer *)sender {
@@ -65,7 +65,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.userIdTextField && textField.text) {
-        [[GrowingCdpAutotracker sharedInstance] setLoginUserId:textField.text];
+        [[GrowingAutotracker sharedInstance] setLoginUserId:textField.text];
         [textField resignFirstResponder];
     }
     

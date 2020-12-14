@@ -21,7 +21,7 @@
 #import "GrowingTrackConfiguration+CdpTracker.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GrowingCdpTracker : GrowingDynamicProxy
+@interface GrowingTracker : GrowingDynamicProxy
 
 + (void)startWithConfiguration:(GrowingTrackConfiguration *)configuration launchOptions:(NSDictionary *)launchOptions;
 

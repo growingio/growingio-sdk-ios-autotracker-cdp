@@ -7,9 +7,8 @@
 //
 
 #import "GIOClickEventViewController.h"
-#import <GrowingCdpTracker.h>
 #import "AppDelegate.h"
-#import "GrowingCdpAutotracker.h"
+#import "GrowingAutotracker.h"
 
 @interface GIOClickEventViewController ()
 
