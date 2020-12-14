@@ -1,5 +1,5 @@
 //
-// GrowingCdpAutotracker.h
+// GrowingAutotracker.h
 // GrowingAnalytics-cdp
 //
 //  Created by sheng on 2020/11/24.
@@ -25,7 +25,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GrowingCdpAutotracker : GrowingDynamicProxy
+@interface GrowingAutotracker : GrowingDynamicProxy
 
 + (void)startWithConfiguration:(GrowingTrackConfiguration *)configuration launchOptions:(NSDictionary *)launchOptions;
 

@@ -1,6 +1,6 @@
 //
-// GrowingCdpAutotracker.m
-// GrowingAnalytics-cdp
+//  GrowingCdpRealTracker.m
+//  GrowingAnalytics-Autotracker-AutotrackerCore-Tracker-TrackerCore
 //
 //  Created by sheng on 2020/11/24.
 //  Copyright (C) 2017 Beijing Yishu Technology Co., Ltd.
@@ -17,30 +17,30 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
-#import "GrowingCdpAutotracker.h"
+#import "GrowingTracker.h"
 #import "GrowingArgumentChecker.h"
 #import "GrowingEventManager.h"
 #import "GrowingTrackConfiguration.h"
 #import "GrowingResourceCustomEvent.h"
 #import "GrowingDispatchManager.h"
 #import "GrowingCdpEventInterceptor.h"
-#import "GrowingTrackConfiguration+CdpTracker.h"
 #import "GrowingLogMacros.h"
 #import "GrowingCocoaLumberjack.h"
-#import "GrowingSession.h"
-static GrowingCdpAutotracker *sharedInstance = nil;
-
-@interface GrowingCdpAutotracker ()
-@property(nonatomic, strong) GrowingCdpEventInterceptor *interceptor;
+#import "GrowingRealTracker.h"
+@interface GrowingTracker ()
+@property (nonatomic, strong) GrowingCdpEventInterceptor *interceptor;
 @end
 
-@implementation GrowingCdpAutotracker
+@implementation GrowingTracker
 
-- (instancetype)initWithRealAutotracker:(GrowingRealAutotracker *)realAutotracker {
-    self = [super initWithTarget:realAutotracker];
+static GrowingTracker *sharedInstance = nil;
+
+- (instancetype)initWithRealTracker:(GrowingRealTracker *)realTracker {
+    self = [super initWithTarget:realTracker];
     return self;
 }
+
+
 
 + (void)startWithConfiguration:(GrowingTrackConfiguration *)configuration launchOptions:(NSDictionary *)launchOptions {
     if (![NSThread isMainThread]) {
@@ -53,17 +53,17 @@ static GrowingCdpAutotracker *sharedInstance = nil;
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        GrowingRealAutotracker *autotracker = [GrowingRealAutotracker trackerWithConfiguration:configuration launchOptions:launchOptions];
-        sharedInstance = [[self alloc] initWithRealAutotracker:autotracker];
+        GrowingRealTracker *realTracker = [GrowingRealTracker trackerWithConfiguration:configuration launchOptions:launchOptions];
+        sharedInstance = [[self alloc] initWithRealTracker:realTracker];
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
-        [[GrowingSession currentSession] addUserIdChangedDelegate:sharedInstance.interceptor];
         [[GrowingEventManager shareInstance] addInterceptor:sharedInstance.interceptor];
+        
     });
 }
 
 + (instancetype)sharedInstance {
     if (!sharedInstance) {
-        @throw [NSException exceptionWithName:@"GrowingAutotracker未初始化" reason:@"请在applicationDidFinishLaunching中调用startWithConfiguration函数,并且确保在主线程中" userInfo:nil];
+        @throw [NSException exceptionWithName:@"GrowingCdpTracker未初始化" reason:@"请在applicationDidFinishLaunching中调用startWithConfiguration函数,并且确保在主线程中" userInfo:nil];
     }
     return sharedInstance;
 }

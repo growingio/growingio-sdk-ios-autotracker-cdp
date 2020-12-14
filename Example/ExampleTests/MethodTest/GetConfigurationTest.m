@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <KIF/KIF.h>
 #import "MockEventQueue.h"
-#import "GrowingCdpTracker.h"
+#import "GrowingTracker.h"
 @interface GetConfigurationTest : KIFTestCase
 
 @end
@@ -43,13 +43,13 @@
     /*
         Function:测试getTrackVersion
     */
-//    [[GrowingCdpTracker sharedInstance] getVersion];
+//    [[GrowingTracker sharedInstance] getVersion];
 }
 -(void)testGetDeviceId{
     /*
         Function:测试getDeviceId
     */
-    [[GrowingCdpTracker sharedInstance] getDeviceId];
+    [[GrowingTracker sharedInstance] getDeviceId];
 }
 
 @end

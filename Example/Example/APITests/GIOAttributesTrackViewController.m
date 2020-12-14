@@ -11,7 +11,7 @@
 #import "GIOConstants.h"
 #import "GIODataProcessOperation.h"
 #import "GrowingKeyValueCell.h"
-#import "GrowingCdpAutotracker.h"
+#import "GrowingAutotracker.h"
 
 @interface GIOAttributesTrackViewController () <UITableViewDelegate, UITableViewDataSource, GrowingKeyValueCellDelegate>
 
@@ -100,7 +100,7 @@
 
 - (void)trackEventWithAttributes:(NSDictionary *)atts {
     if ([self.eventType isEqualToString:@"LOGIN_USER_ATTRIBUTES"]) {
-        [[GrowingCdpAutotracker sharedInstance] setLoginUserAttributes:atts];
+        [[GrowingAutotracker sharedInstance] setLoginUserAttributes:atts];
 
     }
 
