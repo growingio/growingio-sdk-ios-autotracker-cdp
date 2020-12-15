@@ -21,6 +21,8 @@
 #import "GrowingEventManager.h"
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *kGrowingUserdefault_gioId;
+
 @interface GrowingCdpEventInterceptor : NSObject <GrowingEventInterceptor>
 
 @property (nonatomic, copy, readonly) NSString *dataSourceId;
