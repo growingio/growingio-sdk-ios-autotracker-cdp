@@ -27,6 +27,7 @@
 #import "GrowingLogMacros.h"
 #import "GrowingCocoaLumberjack.h"
 #import "GrowingRealTracker.h"
+
 @interface GrowingTracker ()
 @property (nonatomic, strong) GrowingCdpEventInterceptor *interceptor;
 @end
@@ -63,7 +64,7 @@ static GrowingTracker *sharedInstance = nil;
 
 + (instancetype)sharedInstance {
     if (!sharedInstance) {
-        @throw [NSException exceptionWithName:@"GrowingCdpTracker未初始化" reason:@"请在applicationDidFinishLaunching中调用startWithConfiguration函数,并且确保在主线程中" userInfo:nil];
+        GIOLogError(@"GrowingTracker未初始化,请在applicationDidFinishLaunching中调用startWithConfiguration函数,并且确保在主线程中");
     }
     return sharedInstance;
 }
