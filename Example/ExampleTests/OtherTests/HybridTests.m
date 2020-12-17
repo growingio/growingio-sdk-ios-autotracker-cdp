@@ -1,5 +1,5 @@
 //
-// HybirdTests.m
+// HybridTests.m
 // ExampleTests
 //
 //  Created by GrowingIO on 9/11/20.
@@ -17,33 +17,30 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
+#import <KIF/KIF.h>
 #import <XCTest/XCTest.h>
+
+#import "GrowingTracker.h"
 #import "MockEventQueue.h"
 #import "NoburPoMeaProCheck.h"
-#import "GrowingTracker.h"
-#import <KIF/KIF.h>
 //#import "GrowingWebCircle.h"
 //#import "GrowingSRWebSocket.h"
 
-
-@interface HybirdTests : KIFTestCase
+@interface HybridTests : KIFTestCase
 
 @end
 
-@implementation HybirdTests
+@implementation HybridTests
 
 - (void)setUp {
     [[GrowingTracker sharedInstance] setLoginUserId:@"test"];
     [[viewTester usingLabel:@"UI界面"] tap];
     [viewTester waitForTimeInterval:3];
     [[viewTester usingLabel:@"UI界面"] tap];
-    
 }
 
 - (void)tearDown {
     [[viewTester usingLabel:@"UI界面"] tap];
-    
 }
 
 - (void)testHybrid {
@@ -51,49 +48,41 @@
     [[viewTester usingLabel:@"Hybrid"] tap];
     [viewTester waitForTimeInterval:3];
     [[viewTester usingLabel:@"返回"] tap];
-    
-    
 }
 
--(void)testCollectionView{
+- (void)testCollectionView {
     [[viewTester usingLabel:@"CollectionView"] tap];
     [[viewTester usingLabel:@"UI界面"] tap];
-    
 }
 
--(void)testPageStucture{
+- (void)testPageStucture {
     [[viewTester usingLabel:@"Page Structure"] tap];
     [viewTester waitForTimeInterval:1];
     [[viewTester usingLabel:@"Multi ViewController"] tap];
     [[viewTester usingLabel:@"UI界面"] tap];
-    
 }
--(void)testActionSheets{
+- (void)testActionSheets {
     [[viewTester usingLabel:@"Action Sheets"] tap];
     [viewTester waitForTimeInterval:1];
     [[viewTester usingLabel:@"GrowingAlertMenuThree"] tap];
     [viewTester waitForTimeInterval:1];
     [[viewTester usingLabel:@"Three"] tap];
-    
 }
--(void)testCloseEvent{
-    
-//    [GrowingCloseEvent sendWithLastPage:@"closepage"];
-
+- (void)testCloseEvent {
+    //    [GrowingCloseEvent sendWithLastPage:@"closepage"];
 }
--(void)testWebCircle{
-//    [GrowingWebCircle isRunning];
-//    [GrowingWebCircle stop];
-//    [GrowingWebCircle setNeedUpdateScreen];
-//    [GrowingWebCircle impressScale];
-    
+- (void)testWebCircle {
+    //    [GrowingWebCircle isRunning];
+    //    [GrowingWebCircle stop];
+    //    [GrowingWebCircle setNeedUpdateScreen];
+    //    [GrowingWebCircle impressScale];
 }
 
--(void)testGrowingSRWebSocket{
-//    NSURL *url = [NSURL URLWithString:@"https://www.growingio.com"];
-//    GrowingSRWebSocket *webSocket = [[GrowingSRWebSocket alloc]initWithURL:url];
-//    [webSocket open];
-//    [webSocket close];
+- (void)testGrowingSRWebSocket {
+    //    NSURL *url = [NSURL URLWithString:@"https://www.growingio.com"];
+    //    GrowingSRWebSocket *webSocket = [[GrowingSRWebSocket alloc]initWithURL:url];
+    //    [webSocket open];
+    //    [webSocket close];
 }
 
 @end

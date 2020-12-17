@@ -3,9 +3,9 @@ PODS:
     - GrowingAnalytics-cdp/TrackerCore
     - GrowingAnalytics/AutotrackerCore
   - GrowingAnalytics-cdp/TrackerCore (0.1.0)
-  - GrowingAnalytics/AutotrackerCore (0.1.0):
+  - GrowingAnalytics/AutotrackerCore (0.0.1):
     - GrowingAnalytics/TrackerCore
-  - GrowingAnalytics/TrackerCore (0.1.0)
+  - GrowingAnalytics/TrackerCore (0.0.1)
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
   - KIF/Core (3.7.9)
@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  GrowingAnalytics: 0826405f4f80d8b45128467a4bbe8758440d6688
+  GrowingAnalytics: e9054c04a0e6e08f4a48345ca7e5d00c574d251d
   GrowingAnalytics-cdp: f23c1fdba3f6aadc78d3eb8bad02fbabe25737f6
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
