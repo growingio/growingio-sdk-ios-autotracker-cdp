@@ -1,5 +1,5 @@
 source 'https://github.com/growingio/giospec.git'
-#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
 
 use_frameworks!
@@ -12,8 +12,7 @@ workspace 'GrowingAnalytics-cdp.xcworkspace'
 target 'Example' do
   project 'Example/Example'
   pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
-  # pod 'GrowingAnalytics-cdp/Tracker', :path => './'
-  pod 'GrowingAnalytics/TrackerCore', :path => './../growingio-sdk-ios-autotracker/'
+  pod 'GrowingAnalytics/TrackerCore'
   pod 'SDCycleScrollView', '~> 1.75'
   pod 'MJRefresh'
   pod 'MBProgressHUD'
