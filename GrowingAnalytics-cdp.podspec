@@ -17,7 +17,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://www.growingio.com/'
   s.license          = { :type => 'Apache2.0', :file => 'LICENSE' }
   s.author           = { 'GrowingIO' => 'support@growingio.com' }
-  s.source           = { :git => 'https://github.com/growingio/growingio-sdk-ios-autotracke-cdp.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/growingio/growingio-sdk-ios-autotracker-cdp.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.ios.framework = 'WebKit'
   s.requires_arc = true
