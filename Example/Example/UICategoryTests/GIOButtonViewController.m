@@ -7,6 +7,7 @@
 //
 
 #import "GIOButtonViewController.h"
+#import "GrowingAutotracker.h"
 
 // Corresponds to the row in the alert view section.
 typedef NS_ENUM(NSInteger, AAPLAlertsViewControllerTableRow) {
@@ -32,7 +33,7 @@ typedef NS_ENUM(NSInteger, AAPLAlertsViewControllerTableRow) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[GrowingAutotracker sharedInstance] setLoginUserId:@"33334444"];
     self.title = @"Buttons & AlertView";
     
     [self configureAttributedTextSystemButton];
