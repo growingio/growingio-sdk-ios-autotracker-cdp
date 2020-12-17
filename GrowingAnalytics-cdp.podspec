@@ -22,22 +22,21 @@ TODO: Add long description of the pod here.
   s.ios.framework = 'WebKit'
   s.requires_arc = true
   s.default_subspec = "Autotracker"
-#  s.dependency 'GrowingAnalytics/TrackerCore', '~> 0.1.0'
 
   s.subspec 'TrackerCore' do |trackerCore|
       trackerCore.source_files = 'GrowingTrackerCore/**/*{.h,.m}'
+      trackerCore.dependency 'GrowingAnalytics/TrackerCore', '= 0.0.1'
   end
   
   s.subspec 'Tracker' do |tracker|
       tracker.source_files = 'GrowingTracker/**/*{.h,.m}'
-      tracker.dependency 'GrowingAnalytics/TrackerCore'
-      tracker.dependency 'GrowingAnalytics-cdp/TrackerCore'
+      tracker.dependency 'GrowingAnalytics-cdp/TrackerCore', '= 0.0.1'
   end
   
   s.subspec 'Autotracker' do |autotracker|
       autotracker.source_files = 'GrowingAutotracker/**/*{.h,.m}'
-      autotracker.dependency 'GrowingAnalytics/AutotrackerCore'
-      autotracker.dependency 'GrowingAnalytics-cdp/TrackerCore'
+      autotracker.dependency 'GrowingAnalytics/AutotrackerCore', '= 0.0.1'
+      autotracker.dependency 'GrowingAnalytics-cdp/TrackerCore', '= 0.0.1'
   end
   
 
