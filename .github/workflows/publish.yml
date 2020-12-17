@@ -14,9 +14,9 @@ jobs:
         run: gem install cocoapods
         
       - name: Deploy to Cocoapods
-      run: |
-        set -eo pipefail
-        pod lib lint --allow-warnings --use-libraries
-        pod trunk push --allow-warnings --use-libraries
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          set -eo pipefail
+          pod lib lint --allow-warnings --use-libraries
+          pod trunk push --allow-warnings --use-libraries
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
