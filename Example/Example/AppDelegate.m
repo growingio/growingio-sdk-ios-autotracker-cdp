@@ -34,11 +34,11 @@ static NSString *const kGrowingProjectId = @"0a1b4118dd954ec3bcc69da5138bdb96";
     configuration.dataCollectionServerHost = @"http://106.75.81.105:8080";
     configuration.dataSourceId = @"YourDatasourceId";
     [GrowingAutotracker startWithConfiguration:configuration launchOptions:launchOptions];
-    [[GrowingAutotracker sharedInstance] setLoginUserId:@"112333445"];
+    [[GrowingAutotracker sharedInstance] cleanLoginUserId];
 //    [[GrowingAutotracker sharedInstance] trackCustomEvent:@"iostest01" withAttributes:@{@"age":@"18"}];
     [[GrowingAutotracker sharedInstance] trackCustomEvent:@"resourceItemTest" itemKey:@"testkey" itemId:@"testid" withAttributes:@{@"ok":@"false"}];
 //    [GrowingTracker startWithConfiguration:configuration launchOptions:launchOptions];
-
+    [[GrowingAutotracker sharedInstance] getDeviceId];
     [self registerRemoteNotification];
 
     return YES;
@@ -117,14 +117,12 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
                                                                                  animated:YES
                                                                                completion:nil];
 }
-
+// url scheme跳转
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-//    if ([Growing handleURL:url]) {
-//        return YES;
-//    }
+
     return NO;
 }
 
@@ -132,7 +130,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (BOOL) application:(UIApplication *)application
 continueUserActivity:(NSUserActivity *)userActivity
   restorationHandler:(void (^)(NSArray<id <UIUserActivityRestoring>> *_Nullable))restorationHandler {
-//    [Growing handleURL:userActivity.webpageURL];
     return YES;
 }
 
