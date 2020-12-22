@@ -1,4 +1,3 @@
-source 'https://github.com/growingio/giospec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
 
@@ -18,7 +17,7 @@ target 'Example' do
   pod 'MBProgressHUD'
 #  pod 'AlicloudPush', '~> 1.9.8'
 end
-xxx
+
 target 'ExampleTests' do
    project 'Example/Example'
    pod 'KIF', :configurations => ['Debug']
