@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GrowingAnalytics-cdp'
-  s.version          = '0.0.1'
+  s.version          = '3.0.0'
   s.summary          = 'iOS SDK of GrowingIO.'
   s.description      = <<-DESC
 GrowingAnalytics-cdp基于GrowingAnalytics,同样具备自动采集基本的用户行为事件，比如访问和行为数据等。
@@ -26,18 +26,18 @@ GrowingAnalytics-cdp基于GrowingAnalytics,同样具备自动采集基本的用�
 
   s.subspec 'TrackerCore' do |trackerCore|
       trackerCore.source_files = 'GrowingTrackerCore/**/*{.h,.m}'
-      trackerCore.dependency 'GrowingAnalytics/TrackerCore', '= 0.0.1'
+      trackerCore.dependency 'GrowingAnalytics/TrackerCore', s.version.to_s
   end
   
   s.subspec 'Tracker' do |tracker|
       tracker.source_files = 'GrowingTracker/**/*{.h,.m}'
-      tracker.dependency 'GrowingAnalytics-cdp/TrackerCore', '= 0.0.1'
+      tracker.dependency 'GrowingAnalytics-cdp/TrackerCore', s.version.to_s
   end
   
   s.subspec 'Autotracker' do |autotracker|
       autotracker.source_files = 'GrowingAutotracker/**/*{.h,.m}'
-      autotracker.dependency 'GrowingAnalytics/AutotrackerCore', '= 0.0.1'
-      autotracker.dependency 'GrowingAnalytics-cdp/TrackerCore', '= 0.0.1'
+      autotracker.dependency 'GrowingAnalytics/AutotrackerCore', s.version.to_s
+      autotracker.dependency 'GrowingAnalytics-cdp/TrackerCore', s.version.to_s
   end
   
 
