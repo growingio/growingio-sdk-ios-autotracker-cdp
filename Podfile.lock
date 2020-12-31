@@ -1,12 +1,12 @@
 PODS:
-  - GrowingAnalytics-cdp/Autotracker (3.0.0):
-    - GrowingAnalytics-cdp/TrackerCore (= 3.0.0)
-    - GrowingAnalytics/AutotrackerCore (= 3.0.0)
-  - GrowingAnalytics-cdp/TrackerCore (3.0.0):
-    - GrowingAnalytics/TrackerCore (= 3.0.0)
-  - GrowingAnalytics/AutotrackerCore (3.0.0):
+  - GrowingAnalytics-cdp/Autotracker (3.0.1-beta):
+    - GrowingAnalytics-cdp/TrackerCore (= 3.0.1-beta)
+    - GrowingAnalytics/AutotrackerCore (= 3.0.1-beta)
+  - GrowingAnalytics-cdp/TrackerCore (3.0.1-beta):
+    - GrowingAnalytics/TrackerCore (= 3.0.1-beta)
+  - GrowingAnalytics/AutotrackerCore (3.0.1-beta):
     - GrowingAnalytics/TrackerCore
-  - GrowingAnalytics/TrackerCore (3.0.0)
+  - GrowingAnalytics/TrackerCore (3.0.1-beta)
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
   - KIF/Core (3.7.9)
@@ -40,8 +40,8 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  GrowingAnalytics: 784016b99ce69417053899f3f68452786a10efd7
-  GrowingAnalytics-cdp: 2a6cfd06fc15ba5f23a72cee10dbb25f1f7514c0
+  GrowingAnalytics: ed03aee81d775810fafa77af0e9ba8ad93cc69ac
+  GrowingAnalytics-cdp: 28c0a547c912bcd0c7c921afb00c70c5f7567581
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
