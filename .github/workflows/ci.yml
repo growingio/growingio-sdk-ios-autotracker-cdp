@@ -26,11 +26,7 @@ jobs:
         run: |
           brew tap growingio/homebrew-oclint
           brew install oclint-growing
-          
-          cd $GITHUB_WORKSPACE/../
-          git clone https://github.com/growingio/growingio-sdk-ios-autotracker.git
-          cd $GITHUB_WORKSPACE
-          
+          pod repo update
           pod install
 
       # Runs a set of commands using the runners shell
