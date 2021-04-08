@@ -1,4 +1,18 @@
-#  (2021-04-07)
+#  (2021-04-08)
+
+
+### Bug Fixes
+
+* pod lock 文件修改 ([c4287f8](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/c4287f89e8e1e2b0b4aaf2f3ac50f0ef150ec551))
+
+
+### Features
+
+* 3.1.0版本，CHANGELOG.md修改 ([144300e](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/144300eee0fd2919bc1fe598a661d8aa3693ecc6))
+
+
+
+# [3.1.0-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.0.2...3.1.0-beta) (2021-04-06)
 
 
 ### Bug Fixes
