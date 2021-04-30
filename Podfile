@@ -10,7 +10,8 @@ workspace 'GrowingAnalytics-cdp.xcworkspace'
 
 target 'Example' do
   project 'Example/Example'
-  pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
+  #pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
+  pod 'GrowingAnalytics/AutotrackerCore'
   pod 'SDCycleScrollView', '~> 1.75'
   pod 'MJRefresh'
   pod 'MBProgressHUD'
