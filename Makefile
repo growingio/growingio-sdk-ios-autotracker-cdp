@@ -9,13 +9,11 @@ SONAR_URL=https://sonarcloud.io
 
 clean:
 	rm -rf $(DERIVED_DATA) $(SONAR_WORKDIR)
-	set -o pipefail && xcodebuild clean -workspace $(PROJECT) -scheme Example | xcpretty
-
+	set -o pipefail && xcodebuild clean -workspace $(PROJECT) -scheme Example 
 framework: clean
-	set -o pipefail && xcodebuild build -workspace $(PROJECT) -scheme Example -destination generic/platform=iOS | xcpretty
-
+	set -o pipefail && xcodebuild build -workspace $(PROJECT) -scheme Example -destination generic/platform=iOS 
 test: clean
-	set -o pipefail && cd test -workspace $(PROJECT) -scheme Example -destination $(SIMULATOR) | xcpretty
+	set -o pipefail && cd test -workspace $(PROJECT) -scheme Example -destination $(SIMULATOR) 
 
 test-sonar: clean
 	# Run tests and create Xcode coverage files
