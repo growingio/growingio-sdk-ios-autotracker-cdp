@@ -20,7 +20,7 @@
 
 #import "GrowingDynamicProxy.h"
 #import "GrowingRealAutotracker.h"
-#import "GrowingTrackConfiguration+GrowingAutotracker.h"
+#import "GrowingAutotrackConfiguration.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
 
 NS_ASSUME_NONNULL_BEGIN
