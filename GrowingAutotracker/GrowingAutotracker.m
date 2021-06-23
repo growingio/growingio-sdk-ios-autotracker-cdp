@@ -27,7 +27,7 @@
 #import "GrowingCdpEventInterceptor.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingSession.h"
 static GrowingAutotracker *sharedInstance = nil;
 
@@ -57,7 +57,7 @@ static GrowingAutotracker *sharedInstance = nil;
         sharedInstance = [[self alloc] initWithRealAutotracker:autotracker];
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
         [[GrowingSession currentSession] addUserIdChangedDelegate:sharedInstance.interceptor];
-        [[GrowingEventManager shareInstance] addInterceptor:sharedInstance.interceptor];
+        [[GrowingEventManager sharedInstance] addInterceptor:sharedInstance.interceptor];
     });
 }
 
@@ -82,7 +82,7 @@ static GrowingAutotracker *sharedInstance = nil;
         item.key = itemKey;
         item.id = itemId;
         GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
-        [[GrowingEventManager shareInstance] postEventBuidler:builder];
+        [[GrowingEventManager sharedInstance] postEventBuidler:builder];
     }];
 }
 

@@ -52,7 +52,7 @@
     //                                                           error:nil];
     //  [self.webView loadHTMLString:htmlCont baseURL:baseURL];
     //
-    //    NSURL *requestURL = [NSURL URLWithString:@"http://m.baidu.com/"];
+//        NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
     //    NSURL *requestURL = [NSURL URLWithString:@"https://m.baidu.com/"];
     //    NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
     //    [self.webView loadRequest:request];
@@ -61,8 +61,8 @@
     //    NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
     //    [self.webView loadRequest:request];
 
-    NSURL *url = [NSURL URLWithString:@"https://release-messages.growingio.cn/push/cdp/webcircel.html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL *url = [NSURL URLWithString:@"http://release-messages.growingio.cn/push/cdp/webcircel.html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:4];
     [self.webView loadRequest:request];
 }
 

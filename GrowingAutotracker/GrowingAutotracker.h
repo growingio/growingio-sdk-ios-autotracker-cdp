@@ -22,6 +22,7 @@
 #import "GrowingRealAutotracker.h"
 #import "GrowingAutotrackConfiguration.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

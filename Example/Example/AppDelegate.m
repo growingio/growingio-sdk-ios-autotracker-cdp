@@ -14,7 +14,8 @@
 #import "GIODataProcessOperation.h"
 //使用md5加密
 #import <CommonCrypto/CommonDigest.h>
-#import "GrowingAutotracker.h"
+
+
 
 static NSString *const kGrowingProjectId = @"0a1b4118dd954ec3bcc69da5138bdb96";
 
@@ -28,17 +29,17 @@ static NSString *const kGrowingProjectId = @"0a1b4118dd954ec3bcc69da5138bdb96";
 //    [Bugly startWithAppId:@"93004a21ca"];
 
     // Config GrowingIO
-    GrowingAutotrackConfiguration *configuration = [GrowingAutotrackConfiguration configurationWithProjectId:kGrowingProjectId];
+    GrowingSDKConfiguration *configuration = [GrowingSDKConfiguration configurationWithProjectId:kGrowingProjectId];
     configuration.debugEnabled = YES;
-    configuration.impressionScale = 1.0;
-    configuration.dataCollectionServerHost = @"http://106.75.81.105:8080";
+//    configuration.impressionScale = 1.0;
+//    configuration.dataCollectionServerHost = @"http://106.75.81.105:8080";
     configuration.dataSourceId = @"YourDatasourceId";
-    [GrowingAutotracker startWithConfiguration:configuration launchOptions:launchOptions];
-    [[GrowingAutotracker sharedInstance] cleanLoginUserId];
+    [GrowingSDK startWithConfiguration:configuration launchOptions:launchOptions];
+    [[GrowingSDK sharedInstance] cleanLoginUserId];
 //    [[GrowingAutotracker sharedInstance] trackCustomEvent:@"iostest01" withAttributes:@{@"age":@"18"}];
-    [[GrowingAutotracker sharedInstance] trackCustomEvent:@"resourceItemTest" itemKey:@"testkey" itemId:@"testid" withAttributes:@{@"ok":@"false"}];
+    [[GrowingSDK sharedInstance] trackCustomEvent:@"resourceItemTest" itemKey:@"testkey" itemId:@"testid" withAttributes:@{@"ok":@"false"}];
 //    [GrowingTracker startWithConfiguration:configuration launchOptions:launchOptions];
-    [[GrowingAutotracker sharedInstance] getDeviceId];
+    [[GrowingSDK sharedInstance] getDeviceId];
     [self registerRemoteNotification];
 
     return YES;
