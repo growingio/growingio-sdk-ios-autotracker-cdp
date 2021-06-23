@@ -1,4 +1,38 @@
-#  (2021-04-08)
+#  (2021-06-01)
+
+
+### Features
+
+* 3.2.0版本CDP发布 ([cf2c4b6](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/cf2c4b60be3e489ecb500ffdfea47e9e18ee56ff))
+
+
+
+# [3.2.0-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.1.1-beta...3.2.0-beta) (2021-05-26)
+
+
+### Bug Fixes
+
+* 适配Configuration的变动 ([c3de745](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/c3de74576e1a6d1c240febf2d382ad8343f20c39))
+* 修改demo ([5ca234b](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/5ca234ba9835dfcef389366880c889ae49838a08))
+* 移除Podfile.lock文件 ([1d1c7ed](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/1d1c7eda0fa8f196bb504c6a246ca6163892d644))
+
+
+### Features
+
+* release 3.2.0-beta ([d27d698](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/d27d69885d1573c0d3028781b716b00350f930ba))
+
+
+
+## [3.1.1-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.1.0...3.1.1-beta) (2021-04-08)
+
+
+### Features
+
+* 3.1.1-beta ([28fbcb1](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/28fbcb14b4120cfc22d24b07f8e15878c62cb4a8))
+
+
+
+# [3.1.0](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.1.0-beta...3.1.0) (2021-04-07)
 
 
 ### Bug Fixes

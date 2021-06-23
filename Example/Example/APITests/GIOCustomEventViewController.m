@@ -11,7 +11,7 @@
 #import "GIODataProcessOperation.h"
 #import "GrowingKeyValueCell.h"
 #import "GIODataProcessOperation.h"
-#import "GrowingAutotracker.h"
+
 
 #define DEFAULT_ATTRIBUTES_COUNT 0
 
@@ -53,13 +53,13 @@
     }
     
     if (atts.count > 0) {
-        [[GrowingAutotracker sharedInstance] trackCustomEvent:eventName
+        [[GrowingSDK sharedInstance] trackCustomEvent:eventName
                    withAttributes:atts];
         
         NSLog(@"Track事件，eventName:%@, attributes:%@", eventName, atts);
 
     } else {
-        [[GrowingAutotracker sharedInstance] trackCustomEvent:eventName];
+        [[GrowingSDK sharedInstance] trackCustomEvent:eventName];
         NSLog(@"Track事件，eventName:%@", eventName);
     }
 }

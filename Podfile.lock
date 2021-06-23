@@ -1,0 +1,76 @@
+PODS:
+  - GrowingAnalytics-cdp/Autotracker (3.2.1-beta):
+    - GrowingAnalytics-cdp/TrackerCore (= 3.2.1-beta)
+    - GrowingAnalytics/AutotrackerCore (= 3.2.1-beta)
+    - GrowingAnalytics/Encryption (= 3.2.1-beta)
+    - GrowingAnalytics/MobileDebugger (= 3.2.1-beta)
+    - GrowingAnalytics/Network (= 3.2.1-beta)
+    - GrowingAnalytics/WebCircle (= 3.2.1-beta)
+  - GrowingAnalytics-cdp/Tracker (3.2.1-beta):
+    - GrowingAnalytics-cdp/TrackerCore (= 3.2.1-beta)
+    - GrowingAnalytics/Encryption (= 3.2.1-beta)
+    - GrowingAnalytics/MobileDebugger (= 3.2.1-beta)
+    - GrowingAnalytics/Network (= 3.2.1-beta)
+  - GrowingAnalytics-cdp/TrackerCore (3.2.1-beta):
+    - GrowingAnalytics/TrackerCore (= 3.2.1-beta)
+  - GrowingAnalytics/AutotrackerCore (3.2.1-beta):
+    - GrowingAnalytics/Hybrid
+    - GrowingAnalytics/TrackerCore
+  - GrowingAnalytics/Encryption (3.2.1-beta):
+    - GrowingAnalytics/TrackerCore
+  - GrowingAnalytics/Hybrid (3.2.1-beta):
+    - GrowingAnalytics/TrackerCore
+  - GrowingAnalytics/MobileDebugger (3.2.1-beta):
+    - GrowingAnalytics/TrackerCore
+  - GrowingAnalytics/Network (3.2.1-beta):
+    - GrowingAnalytics/TrackerCore
+  - GrowingAnalytics/TrackerCore (3.2.1-beta)
+  - GrowingAnalytics/WebCircle (3.2.1-beta):
+    - GrowingAnalytics/AutotrackerCore
+    - GrowingAnalytics/Hybrid
+  - KIF (3.7.11):
+    - KIF/Core (= 3.7.11)
+  - KIF/Core (3.7.11)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
+
+DEPENDENCIES:
+  - GrowingAnalytics-cdp/Autotracker (from `./`)
+  - GrowingAnalytics-cdp/Tracker (from `./`)
+  - GrowingAnalytics/AutotrackerCore (from `./../growingio-sdk-ios-autotracker/`)
+  - KIF
+  - MBProgressHUD
+  - MJRefresh
+  - SDCycleScrollView (~> 1.75)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - KIF
+    - MBProgressHUD
+    - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  GrowingAnalytics:
+    :path: "./../growingio-sdk-ios-autotracker/"
+  GrowingAnalytics-cdp:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  GrowingAnalytics: 112c38840e3bc17020dd86f2bf3e27ea0733a17d
+  GrowingAnalytics-cdp: 7c96e03dd0651373ae504a9a79b942b0f0c34a52
+  KIF: 927c502455cd746771c57e9b3a5123c67c7fa0b5
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
+
+PODFILE CHECKSUM: 5ec71cace7ffbe78384224822458d8adc51c5f60
+
+COCOAPODS: 1.9.1

@@ -11,6 +11,10 @@ workspace 'GrowingAnalytics-cdp.xcworkspace'
 target 'Example' do
   project 'Example/Example'
   pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
+#  pod 'GrowingAnalytics/AutotrackerCore', :path => './../growingio-sdk-ios-autotracker/'
+#  pod 'GrowingAnalytics-cdp/Tracker', :path => './'
+#  pod 'GrowingAnalytics/TrackerCore', :path => './../growingio-sdk-ios-autotracker/'
+#  pod 'GrowingAnalytics/Hybrid', :path => './../growingio-sdk-ios-autotracker/'
   pod 'SDCycleScrollView', '~> 1.75'
   pod 'MJRefresh'
   pod 'MBProgressHUD'
@@ -19,6 +23,9 @@ end
 
 target 'ExampleTests' do
    project 'Example/Example'
+   pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
+#   pod 'GrowingAnalytics/AutotrackerCore', :path => './../growingio-sdk-ios-autotracker/'
+   pod 'GrowingAnalytics-cdp/Tracker', :path => './'
    pod 'KIF', :configurations => ['Debug']
 end
 

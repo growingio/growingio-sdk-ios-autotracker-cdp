@@ -25,7 +25,7 @@
 #import "GrowingDispatchManager.h"
 #import "GrowingCdpEventInterceptor.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingRealTracker.h"
 
 @interface GrowingTracker ()
@@ -57,7 +57,7 @@ static GrowingTracker *sharedInstance = nil;
         GrowingRealTracker *realTracker = [GrowingRealTracker trackerWithConfiguration:configuration launchOptions:launchOptions];
         sharedInstance = [[self alloc] initWithRealTracker:realTracker];
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
-        [[GrowingEventManager shareInstance] addInterceptor:sharedInstance.interceptor];
+        [[GrowingEventManager sharedInstance] addInterceptor:sharedInstance.interceptor];
         
     });
 }
@@ -83,7 +83,7 @@ static GrowingTracker *sharedInstance = nil;
         item.key = itemKey;
         item.id = itemId;
         GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
-        [[GrowingEventManager shareInstance] postEventBuidler:builder];
+        [[GrowingEventManager sharedInstance] postEventBuidler:builder];
     }];
 }
 

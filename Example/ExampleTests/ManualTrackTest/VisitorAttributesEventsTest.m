@@ -23,30 +23,5 @@
 
 }
 
-- (void)test1VstrNormal {
-    /**
-     function:vstr正常情况
-     **/
-    [tester waitForTimeInterval:1];
-    [MockEventQueue.sharedQueue cleanQueue];
-    [[GrowingTracker sharedInstance] setVisitorAttributes:@{@"var1" : @"good", @"var2" : @"excell"}];
-    NSArray *visitorAttributesEventArray = [MockEventQueue.sharedQueue eventsFor:@"VISITOR_ATTRIBUTES"];
-    NSLog(@"VISITOR_ATTRIBUTES 事件：%@", visitorAttributesEventArray);
-    if (visitorAttributesEventArray.count >= 1) {
-        NSDictionary *epvarchr = [visitorAttributesEventArray objectAtIndex:visitorAttributesEventArray.count - 1];
-        XCTAssertEqualObjects(epvarchr[@"eventType"], @"VISITOR_ATTRIBUTES");
-        XCTAssertTrue([ManualTrackHelper CheckContainsKey:epvarchr:@"attributes"]);
-        XCTAssertEqualObjects(epvarchr[@"attributes"][@"var1"], @"good");
-        XCTAssertEqualObjects(epvarchr[@"attributes"][@"var2"], @"excell");
-
-        NSDictionary *chres = [ManualTrackHelper visitorAttributesEventCheck:epvarchr];
-        XCTAssertEqualObjects(chres[@"KeysCheck"][@"chres"], @"Passed");
-        XCTAssertEqualObjects(chres[@"ProCheck"][@"chres"], @"same");
-        NSLog(@"CONVERSION_VARIABLES事件，vstr正常情况测试通过-----passed");
-    } else {
-        NSLog(@"CONVERSION_VARIABLES事件，vstr正常情况测试失败:%@", visitorAttributesEventArray);
-        XCTAssertEqual(1, 0);
-    }
-}
 
 @end

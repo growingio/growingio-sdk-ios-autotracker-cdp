@@ -8,7 +8,16 @@
 
 #import "GIOClickEventViewController.h"
 #import "AppDelegate.h"
+
+#if Autotracker
 #import "GrowingAutotracker.h"
+#define GrowingSDK GrowingAutotracker
+#define GrowingSDKConfiguration GrowingAutotrackConfiguration
+#else
+#import "GrowingTracker.h"
+#define GrowingSDK GrowingTracker
+#define GrowingSDKConfiguration GrowingTrackConfiguration
+#endif
 
 @interface GIOClickEventViewController ()
 
@@ -23,8 +32,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+#if Autotracker
     self.growingPageIgnorePolicy = GrowingIgnoreSelf;
     self.growingPageAlias = @"xxxx";
+#endif
 //    self.segmentControl.growingUniqueTag = @"language-selector";
 
  
