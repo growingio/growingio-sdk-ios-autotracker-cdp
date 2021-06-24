@@ -93,42 +93,14 @@
 		0465315E24DD4272002D254C /* GIOListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465311D24DD4271002D254C /* GIOListTableViewCell.m */; };
 		0465315F24DD4272002D254C /* GIOListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465311E24DD4271002D254C /* GIOListTableViewCell.xib */; };
 		0465316024DD4272002D254C /* GIOButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465312024DD4271002D254C /* GIOButtonViewController.m */; };
-		047BF3A924F638BB0028FE94 /* MediatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF39C24F638BB0028FE94 /* MediatorTest.m */; };
-		047BF3AA24F638BB0028FE94 /* GetIDsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF39F24F638BB0028FE94 /* GetIDsTest.m */; };
-		047BF3AB24F638BB0028FE94 /* GDPRTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A024F638BB0028FE94 /* GDPRTest.m */; };
-		047BF3AC24F638BB0028FE94 /* TrackViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A124F638BB0028FE94 /* TrackViewTest.m */; };
-		047BF3AD24F638BB0028FE94 /* A1TrackAPIMainThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A224F638BB0028FE94 /* A1TrackAPIMainThreadTest.m */; };
-		047BF3AE24F638BB0028FE94 /* FlushIntervalAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A324F638BB0028FE94 /* FlushIntervalAPITest.m */; };
-		047BF3AF24F638BB0028FE94 /* DailyDataLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A424F638BB0028FE94 /* DailyDataLimit.m */; };
-		047BF3B024F638BB0028FE94 /* GetEnableLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A624F638BB0028FE94 /* GetEnableLogTest.m */; };
-		047BF3B124F638BB0028FE94 /* GetConfigurationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3A824F638BB0028FE94 /* GetConfigurationTest.m */; };
-		047BF3B424F6551B0028FE94 /* VisitEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3B324F6551B0028FE94 /* VisitEventsTest.m */; };
-		047BF3BA24F655A50028FE94 /* ClickEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3B624F655A50028FE94 /* ClickEventsTest.m */; };
-		047BF3BB24F655A50028FE94 /* ViewChangeEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3B724F655A50028FE94 /* ViewChangeEventsTest.m */; };
-		047BF3BC24F655A50028FE94 /* PageEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 047BF3B924F655A50028FE94 /* PageEventsTest.m */; };
 		04A6FAF224E662E9006C72F0 /* GIOChildsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FAF124E662E9006C72F0 /* GIOChildsAddViewController.m */; };
 		04A6FAF524E67215006C72F0 /* GIOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FAF424E67215006C72F0 /* GIOBaseViewController.m */; };
-		42ADE26C250B292900CA7268 /* HybridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ADE26B250B292900CA7268 /* HybridTests.m */; };
 		4916270F24E157BB00444AF2 /* GIOPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4916270E24E157BB00444AF2 /* GIOPresentViewController.m */; };
 		4916271224E157CF00444AF2 /* GIOPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4916271124E157CF00444AF2 /* GIOPagingViewController.m */; };
 		491D2D8D2500E2D9001CB289 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491D2D8C2500E2D9001CB289 /* MapKit.framework */; };
-		4962652B24DA667900032551 /* GrowingIO_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962652924DA667900032551 /* GrowingIO_ExampleTests.m */; };
-		4962653924DA66B600032551 /* LogOperHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962652E24DA66B600032551 /* LogOperHelper.m */; };
-		4962653A24DA66B600032551 /* ManualTrackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962653224DA66B600032551 /* ManualTrackHelper.m */; };
-		4962653B24DA66B600032551 /* MockEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962653324DA66B600032551 /* MockEventQueue.m */; };
-		4962653C24DA66B600032551 /* GrowingTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962653524DA66B600032551 /* GrowingTestHelper.m */; };
-		4962653D24DA66B600032551 /* NoburPoMeaProCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962653624DA66B600032551 /* NoburPoMeaProCheck.m */; };
-		4962653E24DA66B600032551 /* NSURLSession+TestHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962653724DA66B600032551 /* NSURLSession+TestHook.m */; };
-		4962656F24DA66BF00032551 /* ConversionVariablesEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655224DA66BF00032551 /* ConversionVariablesEventsTest.m */; };
-		4962657024DA66BF00032551 /* VisitorAttributesEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655424DA66BF00032551 /* VisitorAttributesEventsTest.m */; };
-		4962657124DA66BF00032551 /* CustomEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655724DA66BF00032551 /* CustomEventsTest.m */; };
-		4962657224DA66BF00032551 /* CS1ManualTrackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655824DA66BF00032551 /* CS1ManualTrackTest.m */; };
-		4962657324DA66BF00032551 /* LoginUserAttributerEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655A24DA66BF00032551 /* LoginUserAttributerEventsTest.m */; };
-		4962657524DA66BF00032551 /* PageAttributesEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4962655D24DA66BF00032551 /* PageAttributesEventsTest.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		D11B6BB753D8C3D9D49C5936 /* Pods_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA2ABB8F1029820A3234DB /* Pods_ExampleTests.framework */; };
 		DB4A57BCAF407C6A96A7BA4F /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E3FD24C4FAE13C586766A1 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,35 +209,11 @@
 		0465312124DD4271002D254C /* GIOHybridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOHybridViewController.h; sourceTree = "<group>"; };
 		0465312224DD4271002D254C /* GIOSimpleUIElemtsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOSimpleUIElemtsViewController.h; sourceTree = "<group>"; };
 		0465312324DD4271002D254C /* GIOActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOActionSheetViewController.h; sourceTree = "<group>"; };
-		047BF39A24F638BB0028FE94 /* DailyDataLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyDataLimit.h; sourceTree = "<group>"; };
-		047BF39B24F638BB0028FE94 /* FlushIntervalAPITest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlushIntervalAPITest.h; sourceTree = "<group>"; };
-		047BF39C24F638BB0028FE94 /* MediatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediatorTest.m; sourceTree = "<group>"; };
-		047BF39D24F638BB0028FE94 /* TrackViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewTest.h; sourceTree = "<group>"; };
-		047BF39E24F638BB0028FE94 /* GetEnableLogTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetEnableLogTest.h; sourceTree = "<group>"; };
-		047BF39F24F638BB0028FE94 /* GetIDsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetIDsTest.m; sourceTree = "<group>"; };
-		047BF3A024F638BB0028FE94 /* GDPRTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPRTest.m; sourceTree = "<group>"; };
-		047BF3A124F638BB0028FE94 /* TrackViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewTest.m; sourceTree = "<group>"; };
-		047BF3A224F638BB0028FE94 /* A1TrackAPIMainThreadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A1TrackAPIMainThreadTest.m; sourceTree = "<group>"; };
-		047BF3A324F638BB0028FE94 /* FlushIntervalAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlushIntervalAPITest.m; sourceTree = "<group>"; };
-		047BF3A424F638BB0028FE94 /* DailyDataLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyDataLimit.m; sourceTree = "<group>"; };
-		047BF3A524F638BB0028FE94 /* GetIDsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetIDsTest.h; sourceTree = "<group>"; };
-		047BF3A624F638BB0028FE94 /* GetEnableLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEnableLogTest.m; sourceTree = "<group>"; };
-		047BF3A724F638BB0028FE94 /* GDPRTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPRTest.h; sourceTree = "<group>"; };
-		047BF3A824F638BB0028FE94 /* GetConfigurationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetConfigurationTest.m; sourceTree = "<group>"; };
-		047BF3B224F6551B0028FE94 /* VisitEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitEventsTest.h; sourceTree = "<group>"; };
-		047BF3B324F6551B0028FE94 /* VisitEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitEventsTest.m; sourceTree = "<group>"; };
-		047BF3B524F655A50028FE94 /* ClickEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickEventsTest.h; sourceTree = "<group>"; };
-		047BF3B624F655A50028FE94 /* ClickEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickEventsTest.m; sourceTree = "<group>"; };
-		047BF3B724F655A50028FE94 /* ViewChangeEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewChangeEventsTest.m; sourceTree = "<group>"; };
-		047BF3B824F655A50028FE94 /* ViewChangeEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewChangeEventsTest.h; sourceTree = "<group>"; };
-		047BF3B924F655A50028FE94 /* PageEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageEventsTest.m; sourceTree = "<group>"; };
 		04A6FAE024E2BF11006C72F0 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		04A6FAF024E662E8006C72F0 /* GIOChildsAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIOChildsAddViewController.h; sourceTree = "<group>"; };
 		04A6FAF124E662E9006C72F0 /* GIOChildsAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIOChildsAddViewController.m; sourceTree = "<group>"; };
 		04A6FAF324E67215006C72F0 /* GIOBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIOBaseViewController.h; sourceTree = "<group>"; };
 		04A6FAF424E67215006C72F0 /* GIOBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIOBaseViewController.m; sourceTree = "<group>"; };
-		11EA2ABB8F1029820A3234DB /* Pods_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42ADE26B250B292900CA7268 /* HybridTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridTests.m; sourceTree = "<group>"; };
 		48BA0D37888FF209ED84CD0E /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4916270D24E157BB00444AF2 /* GIOPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIOPresentViewController.h; sourceTree = "<group>"; };
 		4916270E24E157BB00444AF2 /* GIOPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIOPresentViewController.m; sourceTree = "<group>"; };
@@ -273,39 +221,11 @@
 		4916271124E157CF00444AF2 /* GIOPagingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIOPagingViewController.m; sourceTree = "<group>"; };
 		491D2D8C2500E2D9001CB289 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4962651E24DA665200032551 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4962652824DA667900032551 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4962652924DA667900032551 /* GrowingIO_ExampleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingIO_ExampleTests.m; sourceTree = "<group>"; };
-		4962652D24DA66B600032551 /* GrowingTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingTestHelper.h; sourceTree = "<group>"; };
-		4962652E24DA66B600032551 /* LogOperHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOperHelper.m; sourceTree = "<group>"; };
-		4962652F24DA66B600032551 /* MockEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockEventQueue.h; sourceTree = "<group>"; };
-		4962653024DA66B600032551 /* NSURLSession+TestHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+TestHook.h"; sourceTree = "<group>"; };
-		4962653124DA66B600032551 /* NoburPoMeaProCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoburPoMeaProCheck.h; sourceTree = "<group>"; };
-		4962653224DA66B600032551 /* ManualTrackHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualTrackHelper.m; sourceTree = "<group>"; };
-		4962653324DA66B600032551 /* MockEventQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockEventQueue.m; sourceTree = "<group>"; };
-		4962653424DA66B600032551 /* LogOperHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOperHelper.h; sourceTree = "<group>"; };
-		4962653524DA66B600032551 /* GrowingTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingTestHelper.m; sourceTree = "<group>"; };
-		4962653624DA66B600032551 /* NoburPoMeaProCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoburPoMeaProCheck.m; sourceTree = "<group>"; };
-		4962653724DA66B600032551 /* NSURLSession+TestHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+TestHook.m"; sourceTree = "<group>"; };
-		4962653824DA66B600032551 /* ManualTrackHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualTrackHelper.h; sourceTree = "<group>"; };
-		4962655024DA66BF00032551 /* CS1ManualTrackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS1ManualTrackTest.h; sourceTree = "<group>"; };
-		4962655124DA66BF00032551 /* CustomEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEventsTest.h; sourceTree = "<group>"; };
-		4962655224DA66BF00032551 /* ConversionVariablesEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionVariablesEventsTest.m; sourceTree = "<group>"; };
-		4962655424DA66BF00032551 /* VisitorAttributesEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitorAttributesEventsTest.m; sourceTree = "<group>"; };
-		4962655524DA66BF00032551 /* LoginUserAttributerEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUserAttributerEventsTest.h; sourceTree = "<group>"; };
-		4962655624DA66BF00032551 /* PageAttributesEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageAttributesEventsTest.h; sourceTree = "<group>"; };
-		4962655724DA66BF00032551 /* CustomEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEventsTest.m; sourceTree = "<group>"; };
-		4962655824DA66BF00032551 /* CS1ManualTrackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS1ManualTrackTest.m; sourceTree = "<group>"; };
-		4962655924DA66BF00032551 /* ConversionVariablesEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionVariablesEventsTest.h; sourceTree = "<group>"; };
-		4962655A24DA66BF00032551 /* LoginUserAttributerEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUserAttributerEventsTest.m; sourceTree = "<group>"; };
-		4962655B24DA66BF00032551 /* VisitorAttributesEventsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitorAttributesEventsTest.h; sourceTree = "<group>"; };
-		4962655D24DA66BF00032551 /* PageAttributesEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageAttributesEventsTest.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		79424AEB90B32411A6333538 /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9A876D5DC8D9DD502F29EF91 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7E3FD24C4FAE13C586766A1 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD17E1EE298841C971EAE661 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -315,7 +235,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D11B6BB753D8C3D9D49C5936 /* Pods_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,108 +427,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		047BF38D24F6379B0028FE94 /* ProtocolAndApi */ = {
-			isa = PBXGroup;
-			children = (
-				047BF3B524F655A50028FE94 /* ClickEventsTest.h */,
-				047BF3B624F655A50028FE94 /* ClickEventsTest.m */,
-				047BF3B924F655A50028FE94 /* PageEventsTest.m */,
-				047BF3B824F655A50028FE94 /* ViewChangeEventsTest.h */,
-				047BF3B724F655A50028FE94 /* ViewChangeEventsTest.m */,
-				047BF3B224F6551B0028FE94 /* VisitEventsTest.h */,
-				047BF3B324F6551B0028FE94 /* VisitEventsTest.m */,
-			);
-			path = ProtocolAndApi;
-			sourceTree = "<group>";
-		};
-		047BF39924F638BA0028FE94 /* MethodTest */ = {
-			isa = PBXGroup;
-			children = (
-				047BF3A224F638BB0028FE94 /* A1TrackAPIMainThreadTest.m */,
-				047BF39A24F638BB0028FE94 /* DailyDataLimit.h */,
-				047BF3A424F638BB0028FE94 /* DailyDataLimit.m */,
-				047BF39B24F638BB0028FE94 /* FlushIntervalAPITest.h */,
-				047BF3A324F638BB0028FE94 /* FlushIntervalAPITest.m */,
-				047BF3A724F638BB0028FE94 /* GDPRTest.h */,
-				047BF3A024F638BB0028FE94 /* GDPRTest.m */,
-				047BF3A824F638BB0028FE94 /* GetConfigurationTest.m */,
-				047BF39E24F638BB0028FE94 /* GetEnableLogTest.h */,
-				047BF3A624F638BB0028FE94 /* GetEnableLogTest.m */,
-				047BF3A524F638BB0028FE94 /* GetIDsTest.h */,
-				047BF39F24F638BB0028FE94 /* GetIDsTest.m */,
-				047BF39C24F638BB0028FE94 /* MediatorTest.m */,
-				047BF39D24F638BB0028FE94 /* TrackViewTest.h */,
-				047BF3A124F638BB0028FE94 /* TrackViewTest.m */,
-			);
-			name = MethodTest;
-			path = ExampleTests/MethodTest;
-			sourceTree = "<group>";
-		};
-		42ADE26A250B28BC00CA7268 /* OtherTests */ = {
-			isa = PBXGroup;
-			children = (
-				42ADE26B250B292900CA7268 /* HybridTests.m */,
-			);
-			path = OtherTests;
-			sourceTree = "<group>";
-		};
-		4962651F24DA665200032551 /* ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				4962652924DA667900032551 /* GrowingIO_ExampleTests.m */,
-				4962652C24DA66B600032551 /* Helper */,
-				4962652824DA667900032551 /* Info.plist */,
-				047BF38D24F6379B0028FE94 /* ProtocolAndApi */,
-				4962654F24DA66BF00032551 /* ManualTrackTest */,
-				42ADE26A250B28BC00CA7268 /* OtherTests */,
-			);
-			path = ExampleTests;
-			sourceTree = "<group>";
-		};
-		4962652C24DA66B600032551 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				4962653024DA66B600032551 /* NSURLSession+TestHook.h */,
-				4962653724DA66B600032551 /* NSURLSession+TestHook.m */,
-				4962652F24DA66B600032551 /* MockEventQueue.h */,
-				4962653324DA66B600032551 /* MockEventQueue.m */,
-				4962653424DA66B600032551 /* LogOperHelper.h */,
-				4962652E24DA66B600032551 /* LogOperHelper.m */,
-				4962652D24DA66B600032551 /* GrowingTestHelper.h */,
-				4962653524DA66B600032551 /* GrowingTestHelper.m */,
-				4962653124DA66B600032551 /* NoburPoMeaProCheck.h */,
-				4962653624DA66B600032551 /* NoburPoMeaProCheck.m */,
-				4962653824DA66B600032551 /* ManualTrackHelper.h */,
-				4962653224DA66B600032551 /* ManualTrackHelper.m */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		4962654F24DA66BF00032551 /* ManualTrackTest */ = {
-			isa = PBXGroup;
-			children = (
-				4962655024DA66BF00032551 /* CS1ManualTrackTest.h */,
-				4962655824DA66BF00032551 /* CS1ManualTrackTest.m */,
-				4962655924DA66BF00032551 /* ConversionVariablesEventsTest.h */,
-				4962655224DA66BF00032551 /* ConversionVariablesEventsTest.m */,
-				4962655524DA66BF00032551 /* LoginUserAttributerEventsTest.h */,
-				4962655A24DA66BF00032551 /* LoginUserAttributerEventsTest.m */,
-				4962655624DA66BF00032551 /* PageAttributesEventsTest.h */,
-				4962655D24DA66BF00032551 /* PageAttributesEventsTest.m */,
-				4962655124DA66BF00032551 /* CustomEventsTest.h */,
-				4962655724DA66BF00032551 /* CustomEventsTest.m */,
-				4962655B24DA66BF00032551 /* VisitorAttributesEventsTest.h */,
-				4962655424DA66BF00032551 /* VisitorAttributesEventsTest.m */,
-			);
-			path = ManualTrackTest;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				046530BA24DD4271002D254C /* Example */,
-				4962651F24DA665200032551 /* ExampleTests */,
-				047BF39924F638BA0028FE94 /* MethodTest */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				7D103DEFD312B6151DF0F9EA /* Pods */,
@@ -634,7 +455,6 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				A7E3FD24C4FAE13C586766A1 /* Pods_Example.framework */,
-				11EA2ABB8F1029820A3234DB /* Pods_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -644,8 +464,6 @@
 			children = (
 				48BA0D37888FF209ED84CD0E /* Pods-Example.debug.xcconfig */,
 				AD17E1EE298841C971EAE661 /* Pods-Example.release.xcconfig */,
-				79424AEB90B32411A6333538 /* Pods-ExampleTests.debug.xcconfig */,
-				9A876D5DC8D9DD502F29EF91 /* Pods-ExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -657,11 +475,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4962652724DA665200032551 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
 			buildPhases = (
-				D82F3128F826E62B39F8A14D /* [CP] Check Pods Manifest.lock */,
 				4962651A24DA665200032551 /* Sources */,
 				4962651B24DA665200032551 /* Frameworks */,
 				4962651C24DA665200032551 /* Resources */,
-				8F8F7BBB9A89FC6F783C21C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -852,7 +668,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GrowingAnalytics-cdp-Autotracker-TrackerCore/GrowingAnalytics_cdp.framework",
+				"${BUILT_PRODUCTS_DIR}/GrowingAnalytics-cdp/GrowingAnalytics_cdp.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingAnalytics/GrowingAnalytics.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -873,50 +689,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F8F7BBB9A89FC6F783C21C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExampleTests/Pods-ExampleTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GrowingAnalytics-cdp-Autotracker-Tracker-TrackerCore/GrowingAnalytics_cdp.framework",
-				"${BUILT_PRODUCTS_DIR}/GrowingAnalytics/GrowingAnalytics.framework",
-				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingAnalytics_cdp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingAnalytics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleTests/Pods-ExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D82F3128F826E62B39F8A14D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -924,33 +696,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047BF3A924F638BB0028FE94 /* MediatorTest.m in Sources */,
-				4962653B24DA66B600032551 /* MockEventQueue.m in Sources */,
-				4962653924DA66B600032551 /* LogOperHelper.m in Sources */,
-				4962653D24DA66B600032551 /* NoburPoMeaProCheck.m in Sources */,
-				4962653A24DA66B600032551 /* ManualTrackHelper.m in Sources */,
-				047BF3BB24F655A50028FE94 /* ViewChangeEventsTest.m in Sources */,
-				047BF3B424F6551B0028FE94 /* VisitEventsTest.m in Sources */,
-				047BF3AA24F638BB0028FE94 /* GetIDsTest.m in Sources */,
-				047BF3B024F638BB0028FE94 /* GetEnableLogTest.m in Sources */,
-				4962653E24DA66B600032551 /* NSURLSession+TestHook.m in Sources */,
-				4962653C24DA66B600032551 /* GrowingTestHelper.m in Sources */,
-				4962657124DA66BF00032551 /* CustomEventsTest.m in Sources */,
-				047BF3AF24F638BB0028FE94 /* DailyDataLimit.m in Sources */,
-				4962656F24DA66BF00032551 /* ConversionVariablesEventsTest.m in Sources */,
-				047BF3AC24F638BB0028FE94 /* TrackViewTest.m in Sources */,
-				047BF3B124F638BB0028FE94 /* GetConfigurationTest.m in Sources */,
-				047BF3AB24F638BB0028FE94 /* GDPRTest.m in Sources */,
-				4962657224DA66BF00032551 /* CS1ManualTrackTest.m in Sources */,
-				047BF3AE24F638BB0028FE94 /* FlushIntervalAPITest.m in Sources */,
-				4962652B24DA667900032551 /* GrowingIO_ExampleTests.m in Sources */,
-				047BF3BA24F655A50028FE94 /* ClickEventsTest.m in Sources */,
-				047BF3AD24F638BB0028FE94 /* A1TrackAPIMainThreadTest.m in Sources */,
-				4962657524DA66BF00032551 /* PageAttributesEventsTest.m in Sources */,
-				047BF3BC24F655A50028FE94 /* PageEventsTest.m in Sources */,
-				4962657324DA66BF00032551 /* LoginUserAttributerEventsTest.m in Sources */,
-				42ADE26C250B292900CA7268 /* HybridTests.m in Sources */,
-				4962657024DA66BF00032551 /* VisitorAttributesEventsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,7 +814,6 @@
 		};
 		4962652524DA665200032551 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79424AEB90B32411A6333538 /* Pods-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1110,7 +854,6 @@
 		};
 		4962652624DA665200032551 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A876D5DC8D9DD502F29EF91 /* Pods-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
