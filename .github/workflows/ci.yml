@@ -24,6 +24,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Before script
         run: |
+          pod repo update
           pod install
       - name: Run a multi-line script
         run: |
