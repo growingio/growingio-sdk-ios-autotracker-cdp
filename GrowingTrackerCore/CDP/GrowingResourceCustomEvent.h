@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GrowingCdpResourceItem : NSObject
 
-@property (nonatomic, strong) NSString *id;
-@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) NSString *itemId;
+@property (nonatomic, strong) NSString *itemKey;
 @property (nonatomic, strong) NSDictionary *attributes;
 
 - (NSDictionary *)toDictionary;
@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @class GrowingResourceCustomBuilder;
+
 @interface GrowingResourceCustomEvent : GrowingCustomEvent
 
 @property (nonatomic, strong, readonly) GrowingCdpResourceItem *resourceItem;
@@ -49,6 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 //override
 - (GrowingResourceCustomBuilder *(^)(NSString *value))setEventName;
 - (GrowingResourceCustomBuilder *(^)(NSDictionary <NSString *, NSObject *>*value))setAttributes;
+
 @end
 
 NS_ASSUME_NONNULL_END

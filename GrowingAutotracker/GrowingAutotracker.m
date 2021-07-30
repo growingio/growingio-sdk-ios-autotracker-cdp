@@ -29,13 +29,21 @@
 #import "GrowingLogMacros.h"
 #import "GrowingLogger.h"
 #import "GrowingSession.h"
+
 static GrowingAutotracker *sharedInstance = nil;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface GrowingAutotracker ()
+
 @property(nonatomic, strong) GrowingCdpEventInterceptor *interceptor;
+
 @end
 
 @implementation GrowingAutotracker
+
+#pragma mark - Initialization
 
 - (instancetype)initWithRealAutotracker:(GrowingRealAutotracker *)realAutotracker {
     self = [super initWithTarget:realAutotracker];
@@ -68,22 +76,26 @@ static GrowingAutotracker *sharedInstance = nil;
     return sharedInstance;
 }
 
+#pragma mark - Track Event
+
 - (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId {
     
     [self trackCustomEvent:eventName itemKey:itemKey itemId:itemId withAttributes:nil];
 }
 
-- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> *)attributes {
+- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> * _Nullable)attributes {
     if ([GrowingArgumentChecker isIllegalEventName:itemKey] || [GrowingArgumentChecker isIllegalEventName:itemId]) {
         return;
     }
     [GrowingDispatchManager trackApiSel:_cmd dispatchInMainThread:^{
         GrowingCdpResourceItem *item = [GrowingCdpResourceItem new];
-        item.key = itemKey;
-        item.id = itemId;
+        item.itemKey = itemKey;
+        item.itemId = itemId;
         GrowingResourceCustomBuilder *builder = GrowingResourceCustomEvent.builder.setResourceItem(item).setAttributes(attributes).setEventName(eventName);
         [[GrowingEventManager sharedInstance] postEventBuidler:builder];
     }];
 }
 
 @end
+
+#pragma clang diagnostic pop

@@ -19,7 +19,6 @@
 
 #import "GrowingCdpEventInterceptor.h"
 #import "GrowingPersistenceDataProvider.h"
-#import "GrowingSession.h"
 
 NSString *kGrowingUserdefault_gioId = @"growingio.userdefault.gioId";
 
@@ -34,29 +33,15 @@ NSString *kGrowingUserdefault_gioId = @"growingio.userdefault.gioId";
     return self;;
 }
 
-//在未完成构造event前，返回builder
-- (void)growingEventManagerEventWillBuild:(GrowingBaseBuilder* _Nullable)builder {
+#pragma mark - GrowingEventInterceptor
+
+- (void)growingEventManagerEventWillBuild:(GrowingBaseBuilder * _Nullable)builder {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    //key-value
-    [dict setValue:_dataSourceId forKey:@"dataSourceId"];
-    if (_gioId.length > 0) {
-        [dict setValue:_gioId forKey:@"gioId"];
+    [dict setValue:self.dataSourceId forKey:@"dataSourceId"];
+    if (self.gioId.length > 0) {
+        [dict setValue:self.gioId forKey:@"gioId"];
     }
     builder.setExtraParams(dict);
-}
-
-//在完成构造event之后，返回event
-- (void)growingEventManagerEventDidBuild:(GrowingBaseEvent* _Nullable)event {
-    
-}
-
-- (void)setGioId:(NSString * _Nonnull)gioId {
-    _gioId = gioId;
-    [[GrowingPersistenceDataProvider sharedInstance] setString:gioId forKey:kGrowingUserdefault_gioId];
-}
-
-- (NSString *)gioId {
-    return [[GrowingPersistenceDataProvider sharedInstance] getStringforKey:kGrowingUserdefault_gioId];
 }
 
 #pragma mark - GrowingUserIdChangedDelegate
@@ -65,6 +50,17 @@ NSString *kGrowingUserdefault_gioId = @"growingio.userdefault.gioId";
     if (newUserId.length > 0 && ![_gioId isEqualToString:newUserId]) {
         [self setGioId:newUserId];
     }
+}
+
+#pragma mark - Setter & Getter
+
+- (void)setGioId:(NSString * _Nonnull)gioId {
+    _gioId = gioId;
+    [[GrowingPersistenceDataProvider sharedInstance] setString:gioId forKey:kGrowingUserdefault_gioId];
+}
+
+- (NSString *)gioId {
+    return [[GrowingPersistenceDataProvider sharedInstance] getStringforKey:kGrowingUserdefault_gioId];
 }
 
 @end
