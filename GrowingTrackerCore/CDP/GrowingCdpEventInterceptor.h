@@ -18,18 +18,25 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "GrowingSession.h"
 #import "GrowingEventManager.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 extern NSString *kGrowingUserdefault_gioId;
 
-@interface GrowingCdpEventInterceptor : NSObject <GrowingEventInterceptor>
+@interface GrowingCdpEventInterceptor : NSObject <
+GrowingEventInterceptor,
+GrowingUserIdChangedDelegate>
 
 @property (nonatomic, copy, readonly) NSString *dataSourceId;
 @property (nonatomic, copy, readonly) NSString *gioId;
-- (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithSourceId:(NSString *)dataSourceId;
+
+#pragma mark Unavailable
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

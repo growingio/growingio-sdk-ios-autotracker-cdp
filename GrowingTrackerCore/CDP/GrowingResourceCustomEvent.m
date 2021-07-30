@@ -23,8 +23,8 @@
 
 - (NSDictionary *)toDictionary {
     NSMutableDictionary *dataDictM = [NSMutableDictionary dictionary];
-    dataDictM[@"id"] = self.id;
-    dataDictM[@"key"] = self.key;
+    dataDictM[@"id"] = self.itemId;
+    dataDictM[@"key"] = self.itemKey;
     dataDictM[@"attributes"] = self.attributes;
     return dataDictM;;
 }
@@ -45,7 +45,6 @@
     return [[GrowingResourceCustomBuilder alloc] init];
 }
 
-
 - (NSDictionary *)toDictionary {
     NSMutableDictionary *dataDictM = [NSMutableDictionary dictionaryWithDictionary:[super toDictionary]];
     dataDictM[@"resourceItem"] = self.resourceItem.toDictionary;
@@ -54,6 +53,8 @@
 
 @end
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @implementation GrowingResourceCustomBuilder
 
@@ -69,3 +70,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop
