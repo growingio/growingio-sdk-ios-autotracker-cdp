@@ -87,7 +87,7 @@ static GrowingAutotracker *sharedInstance = nil;
     if ([GrowingArgumentChecker isIllegalEventName:itemKey] || [GrowingArgumentChecker isIllegalEventName:itemId]) {
         return;
     }
-    [GrowingDispatchManager trackApiSel:_cmd dispatchInMainThread:^{
+    [GrowingDispatchManager dispatchInGrowingThread:^{
         GrowingCdpResourceItem *item = [GrowingCdpResourceItem new];
         item.itemKey = itemKey;
         item.itemId = itemId;
