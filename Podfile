@@ -12,7 +12,7 @@ target 'Example' do
   project 'Example/Example'
   pod 'GrowingAnalytics-cdp/Autotracker', :path => './'
 #  pod 'GrowingAnalytics/Autotracker', '= 3.2.1-beta'
-#  pod 'GrowingAnalytics-cdp/Tracker', :path => './'
+  pod 'GrowingAnalytics-cdp/Tracker', :path => './'
 #  pod 'GrowingAnalytics/TrackerCore', :path => './../growingio-sdk-ios-autotracker/'
 #  pod 'GrowingAnalytics/Hybrid', :path => './../growingio-sdk-ios-autotracker/'
   pod 'SDCycleScrollView', '~> 1.75'
