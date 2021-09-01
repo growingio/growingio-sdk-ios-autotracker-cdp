@@ -32,21 +32,25 @@ GrowingAnalytics-cdp基于GrowingAnalytics,同样具备自动采集基本的用�
   s.subspec 'Tracker' do |tracker|
       tracker.source_files = 'GrowingTracker/**/*{.h,.m}'
       tracker.dependency 'GrowingAnalytics-cdp/TrackerCore', s.version.to_s
-      tracker.dependency 'GrowingAnalytics/Network', s.version.to_s
       tracker.dependency 'GrowingAnalytics/MobileDebugger', s.version.to_s
+      
+      tracker.dependency 'GrowingAnalytics/Database', s.version.to_s
+      tracker.dependency 'GrowingAnalytics/Network', s.version.to_s
       tracker.dependency 'GrowingAnalytics/Encryption', s.version.to_s
+      tracker.dependency 'GrowingAnalytics/Compression', s.version.to_s
   end
   
   s.subspec 'Autotracker' do |autotracker|
       autotracker.source_files = 'GrowingAutotracker/**/*{.h,.m}'
       autotracker.dependency 'GrowingAnalytics/AutotrackerCore', s.version.to_s
       autotracker.dependency 'GrowingAnalytics-cdp/TrackerCore', s.version.to_s
-      autotracker.dependency 'GrowingAnalytics/Network', s.version.to_s
+      autotracker.dependency 'GrowingAnalytics/Hybrid', s.version.to_s
       autotracker.dependency 'GrowingAnalytics/MobileDebugger', s.version.to_s
-      autotracker.dependency 'GrowingAnalytics/Encryption', s.version.to_s
-
       autotracker.dependency 'GrowingAnalytics/WebCircle', s.version.to_s
+      
+      autotracker.dependency 'GrowingAnalytics/Database', s.version.to_s
+      autotracker.dependency 'GrowingAnalytics/Network', s.version.to_s
+      autotracker.dependency 'GrowingAnalytics/Encryption', s.version.to_s
+      autotracker.dependency 'GrowingAnalytics/Compression', s.version.to_s
   end
-  
-
 end
