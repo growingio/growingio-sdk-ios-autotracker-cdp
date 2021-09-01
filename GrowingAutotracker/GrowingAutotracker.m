@@ -30,10 +30,10 @@
 #import "GrowingLogger.h"
 #import "GrowingSession.h"
 
-static GrowingAutotracker *sharedInstance = nil;
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
+
+static GrowingAutotracker *sharedInstance = nil;
 
 @interface GrowingAutotracker ()
 
