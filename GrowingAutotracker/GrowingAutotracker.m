@@ -66,6 +66,7 @@ static GrowingAutotracker *sharedInstance = nil;
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
         [[GrowingSession currentSession] addUserIdChangedDelegate:sharedInstance.interceptor];
         [[GrowingEventManager sharedInstance] addInterceptor:sharedInstance.interceptor];
+        [[GrowingSession currentSession] generateVisit];
     });
 }
 

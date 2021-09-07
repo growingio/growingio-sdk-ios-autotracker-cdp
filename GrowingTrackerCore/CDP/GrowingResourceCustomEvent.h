@@ -1,6 +1,6 @@
 //
 //  GrowingResourceCustomEvent.h
-//  GrowingAnalytics-Autotracker-AutotrackerCore-Tracker-TrackerCore
+//  GrowingAnalytics-cdp
 //
 //  Created by sheng on 2020/11/24.
 //  Copyright (C) 2017 Beijing Yishu Technology Co., Ltd.
