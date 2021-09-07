@@ -1,6 +1,6 @@
 //
 //  GrowingCdpRealTracker.m
-//  GrowingAnalytics-Autotracker-AutotrackerCore-Tracker-TrackerCore
+//  GrowingAnalytics-cdp
 //
 //  Created by sheng on 2020/11/24.
 //  Copyright (C) 2017 Beijing Yishu Technology Co., Ltd.
@@ -62,8 +62,9 @@ static GrowingTracker *sharedInstance = nil;
         GrowingRealTracker *realTracker = [GrowingRealTracker trackerWithConfiguration:configuration launchOptions:launchOptions];
         sharedInstance = [[self alloc] initWithRealTracker:realTracker];
         sharedInstance.interceptor = [[GrowingCdpEventInterceptor alloc] initWithSourceId:configuration.dataSourceId];
+        [[GrowingSession currentSession] addUserIdChangedDelegate:sharedInstance.interceptor];
         [[GrowingEventManager sharedInstance] addInterceptor:sharedInstance.interceptor];
-        
+        [[GrowingSession currentSession] generateVisit];
     });
 }
 
