@@ -17,17 +17,15 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
 #import "GrowingAutotracker.h"
+#import "GrowingRealAutotracker.h"
 #import "GrowingArgumentChecker.h"
-#import "GrowingEventManager.h"
-#import "GrowingTrackConfiguration.h"
 #import "GrowingResourceCustomEvent.h"
 #import "GrowingDispatchManager.h"
 #import "GrowingCdpEventInterceptor.h"
-#import "GrowingTrackConfiguration+CdpTracker.h"
 #import "GrowingLogMacros.h"
 #import "GrowingLogger.h"
+#import "GrowingEventManager.h"
 #import "GrowingSession.h"
 
 #pragma clang diagnostic push

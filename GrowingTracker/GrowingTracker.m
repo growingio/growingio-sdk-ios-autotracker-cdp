@@ -18,15 +18,15 @@
 //  limitations under the License.
 
 #import "GrowingTracker.h"
+#import "GrowingRealTracker.h"
 #import "GrowingArgumentChecker.h"
-#import "GrowingEventManager.h"
-#import "GrowingTrackConfiguration.h"
 #import "GrowingResourceCustomEvent.h"
 #import "GrowingDispatchManager.h"
 #import "GrowingCdpEventInterceptor.h"
 #import "GrowingLogMacros.h"
 #import "GrowingLogger.h"
-#import "GrowingRealTracker.h"
+#import "GrowingEventManager.h"
+#import "GrowingSession.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
@@ -82,7 +82,7 @@ static GrowingTracker *sharedInstance = nil;
     [self trackCustomEvent:eventName itemKey:itemKey itemId:itemId withAttributes:nil];
 }
 
-- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> *)attributes {
+- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> * _Nullable)attributes {
     if ([GrowingArgumentChecker isIllegalEventName:itemKey] || [GrowingArgumentChecker isIllegalEventName:itemId]) {
         return;
     }
