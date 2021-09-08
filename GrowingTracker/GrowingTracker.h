@@ -19,6 +19,7 @@
 
 #import "GrowingDynamicProxy.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GrowingTracker : GrowingDynamicProxy
@@ -94,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param itemKey 事件发生关联的物品模型Key
 /// @param itemId 事件发生关联的物品模型ID
 /// @param attributes 事件发生时所伴随的维度信息
-- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> *)attributes;
+- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> * _Nullable)attributes;
 
 ///-------------------------------
 #pragma mark Unavailable
