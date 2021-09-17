@@ -18,8 +18,8 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
-#import "GrowingSession.h"
-#import "GrowingEventManager.h"
+#import <GrowingAnalytics/GrowingSession.h>
+#import <GrowingAnalytics/GrowingEventManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

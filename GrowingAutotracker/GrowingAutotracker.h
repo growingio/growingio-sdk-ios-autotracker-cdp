@@ -17,10 +17,10 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "GrowingDynamicProxy.h"
-#import "GrowingAutotrackConfiguration.h"
-#import "GrowingTrackConfiguration+CdpTracker.h"
 #import <UIKit/UIKit.h>
+#import <GrowingAnalytics/GrowingDynamicProxy.h>
+#import <GrowingAnalytics/GrowingAutotrackConfiguration.h>
+#import "GrowingTrackConfiguration+CdpTracker.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
