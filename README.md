@@ -15,9 +15,7 @@ GrowingIO Autotracker For CDP
 
 ## 集成文档
 
-- [埋点 SDK集成文档](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/wiki/%E5%9F%8B%E7%82%B9-SDK%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3)
-
-- [无埋点 SDK集成文档](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/wiki/%E6%97%A0%E5%9F%8B%E7%82%B9-SDK%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3)
+[如何集成](https://growingio.github.io/growingio-sdk-docs/docs/ios/base/Getting_Started)
 
 ## License
 
