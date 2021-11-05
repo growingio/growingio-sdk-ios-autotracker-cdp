@@ -29,7 +29,7 @@
 			<string>GrowingIO2</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>530c8231345c492d</string>
+				<string>growing.af745dd060b3dc92</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,6 +47,11 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>GrowingIO测试demo 需要访问你的 位置信息</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -72,10 +77,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 </dict>
 </plist>
