@@ -1,4 +1,123 @@
-#  [3.2.1](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.2.1beta...3.2.1) (2021-09-01)
+#  [3.3.3](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.2...3.3.3) (2021-12-23)
+
+
+### Features
+
+* 3.3.3 正式版发布 ([9a65d97](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/9a65d97175ccf7a6c7ed8dcea8ba72f458205c60))
+
+
+
+## [3.3.3-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.2...3.3.3-beta) (2021-12-16)
+
+
+### Features
+
+* release 3.3.3-beta ([62380d6](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/62380d635cc4d150e89ae7ace7eb79c9edb2311e))
+
+
+
+## [3.3.2](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.1-hotfix.3...3.3.2) (2021-12-07)
+
+
+### Features
+
+* 3.3.2 正式版发布 ([01e4f87](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/01e4f87f73cf7ba7f6545a424c47bee5275da4cc))
+
+
+
+## [3.3.1-hotfix.3](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.1-hotfix.2...3.3.1-hotfix.3) (2021-11-24)
+
+
+### Features
+
+* 3.3.1-hotfix.3同步发布 ([eba6868](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/eba68680d5704f8159a43c8094431a3607c6707c))
+
+
+
+## [3.3.1-hotfix.2](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.1-hotfix.1...3.3.1-hotfix.2) (2021-11-10)
+
+
+### Features
+
+* 3.3.1-hotfix.2同步发布 ([77503c7](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/77503c76aa77850be590b06bc8a5cc2399ff5071))
+
+
+
+## [3.3.1-hotfix.1](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.1...3.3.1-hotfix.1) (2021-11-09)
+
+
+### Features
+
+* 3.3.1-hotfix.1 发版 ([ed85a79](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/ed85a79be6350ab671bf6e7a26685e1005641a24))
+
+
+
+## [3.3.1](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.1-beta...3.3.1) (2021-11-03)
+
+
+### Features
+
+* release 3.3.1 正式版 ([0862fd4](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/0862fd4aba1f8b1fb794e9557e453ee679e51639))
+
+
+
+## [3.3.1-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.0...3.3.1-beta) (2021-11-02)
+
+
+### Features
+
+* release 3.3.1-beta ([3334554](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/3334554f9b1b5bbc59544d0f3f2650bb9790cdc7))
+
+
+
+# [3.3.0](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.3.0-beta...3.3.0) (2021-10-13)
+
+
+### Features
+
+* 3.3.0 正式版发布 ([c78d03b](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/c78d03b98577151e902679f1d10ed689518d694e))
+
+
+
+# [3.3.0-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.2.2...3.3.0-beta) (2021-10-08)
+
+
+### Bug Fixes
+
+* .h 中使用库引用的方式导入 GrowingAnalytics 文件 ([09a6a06](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/09a6a0668bc60999b38a7c07024eaaad78de388f))
+
+
+### Features
+
+* release 3.3.0-beta ([ea1685b](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/ea1685bd849d4395f8fb74ab18c790065cef117d))
+
+
+
+## [3.2.2](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.2.2-beta...3.2.2) (2021-09-09)
+
+
+### Features
+
+* 3.2.2 正式版发布 ([30b8bed](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/30b8bedf5ea9d8e4df5ea3cf8ee784ce19e9f565))
+
+
+
+## [3.2.2-beta](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.2.1...3.2.2-beta) (2021-09-09)
+
+
+### Bug Fixes
+
+* cdp Interceptor 添加 gioId 失效 ([c5160fd](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/c5160fd3127a0edd34ebd144b28ae95c6566e4ea))
+* GrowingAutotracker.h 隐藏 RealAutotracker 导入 ([775a2a5](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/775a2a572798987854829b6aa7fce7505f23815d))
+
+
+### Features
+
+* release 3.2.2-beta ([f2ff63f](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/commit/f2ff63f5f4624bbba6498d26e62c22d674d03e03))
+
+
+
+## [3.2.1](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/compare/3.2.1-beta...3.2.1) (2021-09-01)
 
 
 ### Features
